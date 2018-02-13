@@ -10,3 +10,17 @@ padding: 90px 0;
 .cover-head{
 	background-color: rgba(0,0,0,0.5);
 }
+.canvas-anggota{
+	background-color: #D0D3D4;
+}
+.canvas-classa{
+	background-color: rgba(0,0,0,0.5);
+	padding: 25px;
+}
+.canvas-classb{
+	background-color: rgba(39,174,96,0.5);
+	padding: 25px;
+}
+.panel{
+	margin-bottom: 20px;
+}
