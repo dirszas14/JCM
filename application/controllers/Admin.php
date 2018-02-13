@@ -12,7 +12,17 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/footer');		
 	}
 
+public function anggota()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain');
+		$this->load->view('admin/asidebar');
+		$this->load->view('admin/anggota');
+		$this->load->view('admin/footer');		
+	}
+
 }
+
 
 /* End of file Home.php */
 /* Location: ./application/controllers/Home.php */

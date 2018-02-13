@@ -1,5 +1,7 @@
 ul>li>a.navbar-list{
 	padding: 20px 20px;
+	color:white;
+	font-weight: 900;
 }
 
 .login-page{
@@ -12,4 +14,11 @@ ul>li>a.navbar-list{
 .logo span{
 	font-size: 12px;
 	letter-spacing: 0px;
+}
+section.canvas-head{
+background: url('../../img/fototest.jpeg') no-repeat center center;
+padding: 90px 0;
+}
+.cover-head{
+	background-color: rgba(0,0,0,0.5);
 }

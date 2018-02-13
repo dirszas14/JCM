@@ -24,13 +24,13 @@
 
        
           <li>
-            <a href="#">
+            <a href="<?php echo site_url('admin/anggota')?>">
               <i class="fa fa-user"></i><span>Anggota</span>
             </a>
           </li>
            
         
-       <!-- 
+      <!--  
           <li class="treeview">
           <a href="#"><i class= "fa fa-user"></i><span>Anggota</span>
             <span class="pull-right-container">
