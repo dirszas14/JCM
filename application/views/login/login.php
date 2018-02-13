@@ -1,28 +1,23 @@
-<?php 
-session_start();
-if (isset($_SESSION['nip'])) {
-header('location:../dashboard/dashboard.php');
-}
 
- ?>
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>LOGIN - Aplikasi Pemeliharaan</title>
+  <title>LOGIN - Jakarta Center Management</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="../../assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../assets/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css')?>">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="../../assets/bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css')?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css')?>">
   <!-- iCheck -->
-  <link rel="stylesheet" href="../../plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/iCheck/square/blue.css')?>">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,15 +32,15 @@ header('location:../dashboard/dashboard.php');
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <b> E-MAINTENANCE IPSRS </b>
+    <b> JAKARTA CENTER MANAGEMENT </b>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">LOGIN</p>
 
-    <form action="../../function/login-model.php" method="post">
+    <form action="<?php echo site_url('Admin') ?>" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="nip" placeholder="N.I.P">
+        <input type="text" class="form-control" name="nip" placeholder="ID">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

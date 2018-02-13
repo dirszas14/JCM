@@ -1,17 +1,13 @@
-<?php
-session_start();  
-if (!isset($_SESSION['nip'])) {
-header('location:../login/login.php?info=Maaf anda harus login terlebih dahulu');
-}
 
-?>
+
+
 <header class="main-header">
     <!-- Logo -->
     <a href="../../index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>IPSRS</b></span>
+      <span class="logo-mini"><b>JCM</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>E-Maintenance</b> IPSRS</span>
+      <span class="logo-lg"><b>JAKARTA CENTER MANAGEMENT</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -30,22 +26,21 @@ header('location:../login/login.php?info=Maaf anda harus login terlebih dahulu')
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../assets/dist/img/user.png" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?=$_SESSION['nama']?></span>
+              <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="user-image" alt="User Image">
+              <span class="hidden-xs"></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../../assets/dist/img/user.png" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="img-circle" alt="User Image">
                 <p>
-                  <?=$_SESSION['nama'] ?> -
-                  <?=$_SESSION['level'] ?>     
+                    
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-right">
-                  <a href="../../function/login-model.php?logout=true" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?php echo site_url('Login') ?>" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>

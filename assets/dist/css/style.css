@@ -1,3 +1,15 @@
 ul>li>a.navbar-list{
 	padding: 20px 20px;
 }
+
+.login-page{
+	background-color: #3c8dbc;
+}
+.login-logo{
+	color: #FAFAFA;
+	font-size: 45px;
+}
+.logo span{
+	font-size: 12px;
+	letter-spacing: 0px;
+}
