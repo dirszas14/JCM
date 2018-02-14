@@ -1,15 +1,5 @@
-<!-- header file header.php -->
-<?php require_once '../template/header.php'; ?>
-<!-- file connection koneksi.php -->
-<?php require_once '../../function/koneksi.php'; ?>
-
 <div class="wrapper">
   <body class="hold-transition skin-blue sidebar-mini">
-    <!-- headermain or (navbar) -->
-    <?php require_once '../template/headermain.php' ?>
-    <!-- sidebar (asidebar.php) -->
-    <?php require_once '../template/asidebar.php' ?> 
-
 
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
@@ -47,12 +37,12 @@
           </div>
         </div>
         <!-- box body -->
-        <?php
+<!--         <?php
 $nip=$_SESSION['nip'];
 $sql= "SELECT * FROM user WHERE nip='$nip' ";
 $query = mysqli_query($koneksi,$sql);
 $row = mysqli_fetch_assoc($query);
-?>
+?> -->
         <div class="box-body">
          
           <form class="form-horizontal" action="../../function/user-model.php" method='post'>
@@ -80,6 +70,3 @@ $row = mysqli_fetch_assoc($query);
     </section>
   </div>
 </div>
-
-
-<?php require_once '../template/footer.php'; ?>

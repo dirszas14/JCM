@@ -21,7 +21,19 @@ public function anggota()
 		$this->load->view('admin/footer');		
 	}
 
+
+
+public function ubahpassword()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain');
+		$this->load->view('admin/asidebar');
+		$this->load->view('admin/ubahpassword');
+		$this->load->view('admin/footer');		
+	}
+
 }
+
 
 
 /* End of file Home.php */

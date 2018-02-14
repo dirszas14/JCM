@@ -14,14 +14,13 @@
       </div> 
 
       <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu tree" data-widget="tree">
         <li class="header">NAVIGASI UTAMA</li>
         <li>
-          <a href="../dashboard/dashboard.php">
+          <a href="<?php echo site_url('admin')?>">
             <i class="fa fa-dashboard"></i><span>Home</span>
           </a>
         </li>
-
        
           <li>
             <a href="<?php echo site_url('admin/anggota')?>">
@@ -29,29 +28,16 @@
             </a>
           </li>
            
-        
-      <!--  
-          <li class="treeview">
-          <a href="#"><i class= "fa fa-user"></i><span>Anggota</span>
-            <span class="pull-right-container">
-              <i class = "fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class = "treeview-menu">          
-            <li><a href="#"><i class="fa fa-user-plus"></i> <span>Tambah Anggota</span></a></li>          
-            <li><a href="#"><i class="fa fa-edit"></i> <span>Validasi Jadwal</span></a></li>          
-            </ul>
-          </li>          -->
          <li>
-          <a href="#p">
-            <i class="fa fa-files-o"></i><span>Surat</span>
+          <a href="#">
+            <i class="fa fa-envelope"></i><span>Surat</span>
           </a>
         </li>
        
 
         <li>
-          <a href="#">
-            <i class="fa fa-lock"></i><span>Ubah Password</span>
+          <a href="<?php echo site_url('admin/ubahpassword')?>">
+            <i class="fa fa-key"></i><span>Ubah Password</span>
           </a>
         </li>
 
