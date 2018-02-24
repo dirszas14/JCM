@@ -21,14 +21,8 @@
 
 <script>
     $(function(){
-        $('#contoh').DataTable({
-            'paging' : true, 
-            'lengthChange' : true,
-            'searching':true,
-            'ordering':true,
-            'info':true,
-            'autoWidth':true
-        })
+        $('#tabel_anggota').DataTable()
+        $('#tabel_user').DataTable()
     })
 </script>
 </body>

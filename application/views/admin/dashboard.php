@@ -34,7 +34,7 @@
 
 
 		
-      <div class="box">
+      <div class="box box-primary">
       <!-- box header -->
         <div class="box-header with-border">
           <h3 class="box-title">Detail detail detail</h3>

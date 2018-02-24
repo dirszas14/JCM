@@ -32,7 +32,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <b> JAKARTA CENTER MANAGEMENT </b>
+    <b>JAKARTA CENTER MANAGEMENT</b>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -55,8 +55,8 @@
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-offset-8 col-xs-4">
-          <button type="submit" name="login" class="btn btn-primary"  aria-label="Right Align">
-            LOGIN  <span class="fa fa-sign-in" aria-hidden="true"></span>
+          <button type="submit" name="login" class="btn btn-primary"  aria-label="Center Align">
+            LOGIN   <span class="fa fa-sign-in" aria-hidden="true"></span>
           </button>
         </div>
         <!-- /.col -->

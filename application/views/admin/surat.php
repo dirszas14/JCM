@@ -5,7 +5,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Ubah Password
+          Surat Pengantar
         </h1>
         <?php if(isset($_GET['info'])) :?>
           <?php if ($_GET['info'] =='Password tidak sama'): ?>
@@ -28,7 +28,7 @@
       <div class="box box-solid box-primary">
       <!-- box header -->
         <div class="box-header with-border">
-          <h3 class="box-title">Ubah Password</h3>
+          <h3 class="box-title">Surat Pengantar</h3>
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
@@ -47,20 +47,32 @@ $row = mysqli_fetch_assoc($query);
          
           <form class="form-horizontal" action="../../function/user-model.php" method='post'>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Password Baru</label>
+              <label class="col-sm-2 control-label">Kepada</label>
               <div class="col-sm-10">
-                <input type="password" name="password" class="form-control" required="true">
+                <input type="text" name="password" class="form-control" required="true">
+              </div>
+            </div>
+             <div class="form-group">
+              <label class="col-sm-2 control-label">Alamat</label>
+              <div class="col-sm-10">
+                <textarea name="password" class="form-control" required="true"></textarea>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Konfirmasi Password</label>
+              <label class="col-sm-2 control-label">Tanggal</label>
               <div class="col-sm-10">
-                <input type="password" name="confirmpassword" class="form-control" required="true">
+                <input type="text" name="confirmpassword" class="form-control" required="true">
               </div>
             </div> 
+             <div class="form-group">
+              <label class="col-sm-2 control-label">Event</label>
+              <div class="col-sm-10">
+                <input type="text" name="password" class="form-control" required="true">
+              </div>
+            </div>
             <div class=" pull-right">
               <input type="hidden" name="nip" value="<?php echo $nip?>">
-              <button type="submit" class="btn btn-primary" name="editpassword">Simpan</button>
+              <button type="submit" class="btn btn-primary" name="editpassword">Buat</button>
             </div>
           
           </form>

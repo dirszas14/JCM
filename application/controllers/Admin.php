@@ -21,7 +21,23 @@ public function anggota()
 		$this->load->view('admin/footer');		
 	}
 
+public function approve()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain');
+		$this->load->view('admin/asidebar');
+		$this->load->view('admin/approve');
+		$this->load->view('admin/footer');		
+	}
 
+public function surat()
+	{
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain');
+		$this->load->view('admin/asidebar');
+		$this->load->view('admin/surat');
+		$this->load->view('admin/footer');		
+	}
 
 public function ubahpassword()
 	{
