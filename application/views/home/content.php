@@ -43,11 +43,11 @@
     <h1 class="">Anggota</h1>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col">
           <div class="canvas-classa">
           <h2>CLASS A</h2>
           <div class="row">
-            <div class="col-sm-6">
+            <div class="col">
               <div class="card panel">
   <img class="card-img-top" src="<?php echo base_url('assets/img/fototest.jpeg') ?>" alt="Card image cap">
   <div class="card-body">
@@ -57,7 +57,7 @@
   </div>
 </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col">
               <div class="card panel">
   <img class="card-img-top" src="<?php echo base_url('assets/img/fototest.jpeg') ?>" alt="Card image cap">
   <div class="card-body">
@@ -70,7 +70,7 @@
           </div>
         </div>
         </div>
-        <div class="col-md-6">
+        <div class="col">
           <div class="canvas-classb">
           <h2>CLASS B</h2>
            <div class="row">
