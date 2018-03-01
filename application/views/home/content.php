@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Jakarta Center Management</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -17,34 +17,21 @@
     </ul>
   </div>
 </nav>
-<section class="carousel">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="carousel-item active">
-        <img class="d-block img-fluid" src="<?php echo base_url('assets/img/model4.jpg') ?>" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block img-fluid" src="<?php echo base_url('assets/img/model6.jpeg') ?>" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block img-fluid" src="<?php echo base_url('assets/img/model5.jpeg') ?>" alt="Third slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+
+<div class="jumbotron jumbotron-fluid  canvas-head">
+  
+  <div class="container cover-head">
+    <div class="cover-text">
+  <h1 style="color: white;">Jakarta Center Management</h1>
+  <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+  <div class="row">
+    <div class="col-md-2"><a class="btn btn-primary btn-lg col-md-12" href="#" role="button">Link <i class="fas fa-arrow-right"></i></a></div>
+    <div class="col-md-2"><a class="btn btn-primary btn-lg col-md-12" href="#" role="button">Link <i class="fas fa-arrow-right"></i></a></div>
   </div>
-</section>
+  </div>
+  </div>
+</div>
+
 <br>
 <section class="canvas-visimisi text-center">
   <blockquote class="blockquote">
@@ -70,7 +57,7 @@
           <div class="row">
             <div class="col">
               <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/classA.jpg') ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url('assets/img/model7.jpeg') ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -79,7 +66,7 @@
             </div>
             <div class="col">
               <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/classA.jpg') ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -95,8 +82,8 @@
           <h2>CLASS B</h2>
           <div class="row">
             <div class="col">
-              <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/classB.jpg') ?>" alt="Card image cap">
+              <div class="card panel" >
+                <img class="card-img-top" src="<?php echo base_url('assets/img/model4.jpg') ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -105,7 +92,7 @@
             </div>
             <div class="col">
               <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/classB.jpg') ?>" alt="Card image cap">
+                <img class="card-img-top" src="<?php echo base_url('assets/img/model6.jpeg') ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">Card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
