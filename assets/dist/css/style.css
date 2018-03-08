@@ -1,10 +1,17 @@
+body {
+  position: relative;
+}
 h1 {
 	font-size: 55px;
 }
 ul>li>a.navbar-list{
-	padding: 20px 20px;
-	color:white;
-	font-weight: 900;
+	font-size: 20px;
+	padding: 0 20px !important;
+
+}
+ul>li>a.navbar-list:hover {
+	border-bottom: 2px solid #d39e00 ; 
+transition-property: left, right;
 }
 
 .login-page{
@@ -19,18 +26,31 @@ ul>li>a.navbar-list{
 	letter-spacing: 0px;
 }
 .canvas-head{
-background: url('../../img/model1.jpeg')  no-repeat  fixed;
+background: url('../../img/model1.png')  no-repeat  fixed;
 background-size:cover;
+background-position: center center;
 }
-.cover-head{
-	background-color: rgba(0,0,0, 0.7);
-	height: 386px;
+
+nav.shrink { 
+	background-color: rgba(0,0,0,0.9) !important;
+	padding: 10px;
+ }
+/*  .nav-link.active {
+	border-bottom: 2px solid #d39e00 !important;
+} */
+.canvas-services {
+	background:url('../../img/photo2.png') no-repeat fixed;
+	background-size: cover;
+	background-position: center center;
+	color: white;
+}
+hr {
+	background-color: white;
 }
 .cover-text {
-
+padding:280px 0px;
 }
 .canvas-anggota{
-	background-color: #D0D3D4;
 }
 .canvas-classa{
 	background-color: rgba(0,0,0,0.5);
