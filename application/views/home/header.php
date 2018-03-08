@@ -9,5 +9,5 @@
    <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
 	
