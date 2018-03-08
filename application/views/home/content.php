@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md sticky-top navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Jakarta Center Management</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -6,13 +6,18 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="navbar-list" href="#">Daftar</a>
+        <a class="navbar-list" href="">Tentang</a>
       </li>
       <li class="nav-item active">
-        <a class="navbar-list" href="#anggota">Anggota</a>
+        <a class="navbar-list" href="#anggota">Services</a>
       </li>
       <li class="nav-item">
-        <a class="navbar-list" href="#">Kontak</a>
+        <a class="navbar-list" href="#">Blog</a>
+      </li>
+      <li class="nav-item">
+        <a class="navbar-list" href="#">Our Clients</a>
+      </li><li class="nav-item">
+        <a class="navbar-list" href="#">Contact</a>
       </li>
     </ul>
   </div>
