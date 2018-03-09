@@ -90,63 +90,40 @@
     </div>
   </section>
   <section class="canvas-anggota text-center" id="member">
-    <h1 class="">Anggota</h1>
+    <h1 style="color: white;">Member</h1>
     <div class="container-fluid">
       <div class="row">
         <div class="col">
           <div class="canvas-classa">
-          <h2>CLASS A</h2>
+          <h2 style="color:white;">CLASS A</h2>
           <div class="row">
             <div class="col">
-              <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
+               <img class="img-fluid" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
             </div>
             <div class="col">
-              <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
+               <img class="img-fluid" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
             </div>
-          </div>
-          <a href="#" class="btn btn-primary">Lihat Semua</a>
+          </div><br>
+          <a href="#" class="btn btn-info">Lihat Semua</a>
         </div>
         </div>
         <div class="col">
           <div class="canvas-classb">
-          <h2>CLASS B</h2>
+          <h2 style="color: white;">CLASS B</h2>
           <div class="row">
             <div class="col">
-              <div class="card panel" >
-                <img class="card-img-top" src="<?php echo base_url('assets/img/model4.jpg') ?>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
+               <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
             </div>
             <div class="col">
-              <div class="card panel">
-                <img class="card-img-top" src="<?php echo base_url('assets/img/model6.jpeg') ?>" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div>
+              <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
             </div>
           </div>
-          <a href="#" class="btn btn-primary">Lihat Semua</a>
+          <br>
+          <a href="#" class="btn btn-info">Lihat Semua</a>
         </div>
       </div>
     </div>
-  </div>
+  </div><br>
 </section>
 <section class="canvas-blog" id="blog">
   <h1 class="display-2 text-center">BLOG</h1>
