@@ -63,10 +63,38 @@ padding:280px 0px;
 .panel{
 	margin-bottom: 20px;
 }
+.canvas-client {
+	background-color:  #d5dbdb;
+}
+.logo {
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(100%); 
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(100%); 
+    -o-transition: .5s ease-in-out;
+}
+
+.logo:hover {
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: .5s ease-in-out;
+    -moz-filter: grayscale(0%);
+    -moz-transition: .5s ease-in-out;
+    -o-filter: grayscale(0%);
+    -o-transition: .5s ease-in-out;
+} 
 
 .col-centered{
 	float: none;
     margin: 0 auto;
+}
+.canvas-contact {
+	background: url('../../img/Contact-Us.jpg');
+	color: white;
+	background-position: center;
+}
+.kontak {
+	padding:150px 0;
 }
 
 /* footer social icons */

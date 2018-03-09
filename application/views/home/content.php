@@ -15,13 +15,13 @@
         <a class="nav-link navbar-list" href="#member">Member</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#">Blog</a>
+        <a class="nav-link navbar-list" href="#blog">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#">Our Clients</a>
+        <a class="nav-link navbar-list" href="#client">Our Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#">Contact</a>
+        <a class="nav-link navbar-list" href="#contact">Contact</a>
       </li>
     </ul>
   </div>
@@ -66,21 +66,25 @@
       <i class="fa fa-users fa-3x" aria-hidden="true"></i>
       <hr>
       <h3>SPG &amp;SPB</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
    <div class="col">
       <i class="fa fa-user fa-3x" aria-hidden="true"></i>
       <hr>
       <h3>Usher</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
    <div class="col">
      <i class="fa fa-camera fa-3x" aria-hidden="true"></i>
       <hr>
       <h3>Modelling</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
    <div class="col">
       <i class="fa fa-music fa-3x" aria-hidden="true"></i>
       <hr>
       <h3>Band &amp; Singer</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
 </div>
     </div>
@@ -144,7 +148,7 @@
     </div>
   </div>
 </section>
-<section class="canvas-blog">
+<section class="canvas-blog" id="blog">
   <h1 class="display-2 text-center">BLOG</h1>
   <div class="container">
     <div class="row ">
@@ -183,6 +187,45 @@
           </div>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="canvas-client text-center" id="client">
+  <div class="container">
+    <h1 class="display-2">Our Clients</h1>
+    <div class="row">
+      <div class="col">
+        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      </div>
+      <div class="col">
+        <img class="img-fluid logo" src="<?php echo base_url('assets/img/tokopedia.jpg') ?>" alt="">
+      </div><div class="col">
+        <img class="img-fluid logo" src="<?php echo base_url('assets/img/lazada.jpg') ?>" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      </div>
+      <div class="col">
+        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      </div>
+      <div class="col">
+        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="canvas-contact" id="contact">
+  <div class="container text-center">
+    <h1>CONTACT</h1>
+    <div class="row kontak">
+      <div class="col">
+        <h2>Telepon: <i class="fa fa-phone" aria-hidden="true"></i> 082274374344</h2>
+      </div>
+      <div class="col">
+        <h2>Telepon: <i class="fa fa-map-marker" aria-hidden="true"></i> Jl. Gallangung NO.47</h2>
       </div>
     </div>
   </div>
