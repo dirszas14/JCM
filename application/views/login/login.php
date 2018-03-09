@@ -38,20 +38,23 @@
   <div class="login-box-body">
     <p class="login-box-msg">LOGIN</p>
 
-    <form action="<?php echo site_url('Admin') ?>" method="post">
+    <form action="<?php echo site_url('Login/proses') ?>" method="post">
+      <?php if (validation_errors() || $this->session->flashdata('result_login')) { ?>
+            <div class="alert alert-danger animated fadeInDown" role="alert">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Peringatan!</strong>
+                <?php echo validation_errors(); ?>
+                <?php echo $this->session->flashdata('result_login'); ?>
+            </div>
+      <?php } ?>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="nip" placeholder="ID">
+        <input type="text" class="form-control" name="id_user" placeholder="ID User">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" name="password" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <?php if (isset($_GET['info'])): ?>
-      <div class="text text-danger text-center">
-        <?=$_GET['info'] ?>
-      </div>  
-      <?php endif ?>
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-offset-8 col-xs-4">

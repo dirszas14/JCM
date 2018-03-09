@@ -84,7 +84,7 @@
           </div>
         </div>
       </div>
-      
+      <?php if($this->session->userdata('level')=="Super Admin"): ?>
       <div class="box box-solid box-primary">
         <!-- box header -->
         <div class="box-header with-border">
@@ -147,6 +147,7 @@
       </div>
     </div>
   </div>
+  <?php endif; ?>
 </section>
 </div>
 </div>
@@ -162,89 +163,84 @@
 <h4 class="modal-title">Tambah Anggota</h4>
 </div>
 <div class="modal-body">
-<form class="form-horizontal" action="#" method='post' enctype="multipart/form-data">
+<form class="form-horizontal" action="<?php echo site_url('crud/tambahanggota_proses')?>" method='post' enctype="multipart/form-data">
   <div class="form-group">
-    <label class="col-sm-2 control-label">No.KTP</label>
-    <div class="col-sm-10">
-      <input type="text" name="nip" class="form-control" required="true">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">No. HP (Selalu aktif)</label>
-    <div class="col-sm-10">
+    <label class="col-sm-2 control-label">Nama Lengkap</label>
+    <div class="col-sm-8">
       <input type="text" name="nama" class="form-control" required="true">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-2 control-label">Kota Tempat Tinggal</label>
-    <div class="col-sm-10">
-      <textarea name="alamat" class="form-control"></textarea>
+    <label class="col-sm-2 control-label">Usia</label>
+    <div class="col-sm-5">
+      <input type="text" name="usia" class="form-control" required="true">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">No. HP</label>
+    <div class="col-sm-8">
+      <input type="text" name="no_telp" class="form-control" required="true">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Kota Domisili</label>
+    <div class="col-sm-6">
+      <input type="text" name="domisili" class="form-control" required="true">
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Tempat Lahir</label>
     <div class="col-sm-6">
-      <input type="text" name="nama" class="form-control" required="true">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">Bagian</label>
-    <div class="col-sm-10">
-      <select name="bagian" class="form-control" id="">
-        <option value="">Pilih Bagian</option>
-        <option value="IPSRS">IPSRS</option>
-        <option value="ICU">ICU</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">Agama</label>
-    <div class="col-sm-10">
-      <select name="agama" class="form-control" id="">
-        <option value="">Pilih Agama</option>
-        <option value="Islam">Islam</option>
-        <option value="Protestan">Protestan</option>
-        <option value="Katolik">Katolik</option>
-        <option value="Hindu">Hindu</option>
-        <option value="Buddha">Buddha</option>
-      </select>
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">Tanggal Lahir</label>
-    <div class="col-sm-10">
-      <input type="text" name="tgl_lahir" class="form-control" required="true">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="col-sm-2 control-label">Tempat Lahir</label>
-    <div class="col-sm-10">
       <input type="text" name="tmp_lahir" class="form-control" required="true">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-2 control-label">No Telp</label>
-    <div class="col-sm-10">
-      <input type="text" name="no_tlp" class="form-control" required="true">
+    <label class="col-sm-2 control-label">Tanggal Lahir</label>
+    <div class="col-sm-6">
+      <input type="text" name="tgl_lahir" class="form-control" required="true">
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-2 control-label">Jenis Kelamin</label>
+    <label class="col-sm-2 control-label">Tinggi Badan</label>
+    <div class="col-sm-3">
+      <input type="text" name="tinggibadan" class="form-control" required="true" placeholder="Cm">
+    </div>
+    <label class="col-sm-2 control-label">Berat Badan</label>
+    <div class="col-sm-3">
+      <input type="text" name="beratbadan" class="form-control" required="true" placeholder="Kg">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Status Pernikahan</label>
     <div class="col-sm-10">
-      <div class="form-group">
-        <div class="radio">
-          <label>
-            <input type="radio" name="j_kel" value="Laki-Laki">
-            Laki-Laki
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="j_kel"  value="Perempuan">
-            Perempuan
-          </label>
-        </div>
-      </div>
+      <select name="status" class="form-control" id="">
+        <option value="">Pilih Status</option>
+        <option value="Belum Menikah">Belum Menikah</option>
+        <option value="Sudah Menikah">Sudah Menikah</option>
+        <option value="Bercerai">Bercerai</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Pengalaman</label>
+    <div class="col-sm-10">
+      <textarea name="pengalaman" class="form-control"></textarea>
+    </div>
+  </div>
+   <div class="form-group">
+      <label class="col-sm-2 control-label">Grade</label>
+    <div class="col-sm-10">
+      <select name="grade" class="form-control" id="">
+        <option value="">Pilih Grade</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Insentif</label>
+    <div class="col-sm-10">
+      <input type="text" name="insentif" class="form-control" required="true" placeholder="Per 8 jam">
     </div>
   </div>
   <!--   <div class="form-group">
@@ -253,9 +249,6 @@
       <input type="file" name="photo">
     </div>
   </div> -->
-  <div class="form-group">
-    <label class="col-sm-offset-2 col-sm-10">Password awal akan sama dengan nomor telepon</label>
-  </div>
   <div class="form-group">
     <div class="col-sm-8">
     </div>
@@ -274,6 +267,7 @@
 </div>
 </div>
 <!-- Modal -->
+
 <div id="tambahuser" class="modal fade" role="dialog">
 <div class="modal-dialog">
 <!-- Modal content-->
@@ -283,10 +277,48 @@
 <h4 class="modal-title">Tambah User</h4>
 </div>
 <div class="modal-body">
-<p>Some text in the modal.</p>
+<form class="form-horizontal" action="<?php echo site_url('crud/tambahuser_proses')?>" method='post' enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Nama</label>
+    <div class="col-sm-10">
+      <input type="text" name="nama" class="form-control" required="true">
+    </div>
+  </div>
+   <div class="form-group">
+    <label class="col-sm-2 control-label">Level</label>
+    <div class="col-sm-10">
+      <select name="level" class="form-control" id="">
+        <option value="">Pilih Level</option>
+        <option value="Super Admin">Super Admin</option>
+        <option value="Admin">Admin</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">No.Telp</label>
+    <div class="col-sm-10">
+      <input type="text" name="no_telp" class="form-control" required="true">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-offset-2 col-sm-10">Id User Otomatis</label>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-offset-2 col-sm-10">Password awal akan sama dengan nomor telepon</label>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-8">
+    </div>
+    <div class="col-sm-2">
+      <button type="submit" class="btn btn-primary" name="tambahuser">Simpan</button>
+    </div>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+</form>
 </div>
 <div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 </div>
 </div>
 </div>

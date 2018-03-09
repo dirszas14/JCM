@@ -7,7 +7,7 @@
         <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p>Admin</p>
+        <p><?php echo $this->session->userdata('nama'); ?></p>
         <i class="fa fa-circle text-success"></i> Online
       </div>
     </div>
@@ -19,7 +19,7 @@
           <i class="fa fa-dashboard"></i><span>Home</span>
         </a>
       </li>
-      <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';}
+     <!--  <li class="treeview <?php if($this->uri->segment(2)=="waitingTA" OR $this->uri->segment(2)=="tolakemailta"){ echo 'active waiting-active';}
         else if($this->uri->segment(2)=="finishTA"){ echo 'active anggota-active';}
         else if ($this->uri->segment(2)=="prosesTA"){echo 'active approve-active';}?>">
         <a href="#"><i class= "fa fa-user"></i><span>Keanggotaan</span>
@@ -31,13 +31,17 @@
         <li class="<?php if($this->uri->segment(2)=="anggota"){echo 'active anggota-active';} ?>"><a href="<?php echo site_url('admin/anggota')?>"><i class="fa fa-user-plus"></i> <span>Anggota</span></a></li>
         <li class="<?php if($this->uri->segment(2)=="approve"){echo 'active approve-active';} ?>"><a href="<?php echo site_url('admin/approve')?>"><i class="fa fa-check"></i> <span>Approve</span></a></li>
       </ul>
-    </li>
-    <li class="<?php if($this->uri->segment(2)=="surat"){echo 'active';} ?>">
-      <a href="<?php echo site_url('admin/surat')?>">
-        <i class="fa fa-envelope"></i><span>Surat Pengantar</span>
+    </li>     -->
+    <li class="<?php if($this->uri->segment(2)=="anggota"){echo 'active';} ?>">
+      <a href="<?php echo site_url('admin/anggota')?>">
+        <i class="fa fa-user-plus"></i><span>Anggota</span>
       </a>
     </li>
-    
+    <li class="<?php if($this->uri->segment(2)=="approve"){echo 'active';} ?>">
+      <a href="<?php echo site_url('admin/approve')?>">
+        <i class="fa fa-check"></i><span>Approve</span>
+      </a>
+    </li>
     <li class="<?php if($this->uri->segment(2)=="ubahpassword"){echo 'active';} ?>">
       <a href="<?php echo site_url('admin/ubahpassword')?>">
         <i class="fa fa-key"></i><span>Ubah Password</span>
