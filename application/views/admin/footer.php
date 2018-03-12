@@ -25,5 +25,8 @@
         $('#tabel_user').DataTable()
     })
 </script>
+ <script>
+  $('input[name=tgl_lahir').datepicker({ format: 'dd-m-yyyy' });
+  </script>
 </body>
 </html>

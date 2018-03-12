@@ -62,24 +62,6 @@
                 </select>
               </div>
             </div>
-             <div class="form-group">
-              <label class="col-sm-2 control-label">Bagian</label>
-              <div class="col-sm-10">
-                <select name="bagian" class="form-control" id="">
-                  <option value="">Pilih Bagian</option>
-                  <option value="IPSRS">IPSRS</option>
-                  <option value="ICU">ICU</option>
-                  <option value="HCU">HCU</option>
-                  <option value="UGD">UGD</option>
-                  <option value="OKA">OKA</option>
-                  <option value="Melati">Melati</option>
-                  <option value="Mawar">Mawar</option>
-                  <option value="Anggrek">Anggrek</option>
-                  <option value="Radiologi">Radiologi</option>
-                  <option value="Radiodiagnostik">Radiodiagnostik</option>
-                </select>
-              </div>
-            </div>
             <div class="form-group">
               <label class="col-sm-2 control-label">Agama</label>
               <div class="col-sm-10">
@@ -136,8 +118,17 @@
                 <input type="file" name="photo">
               </div>
             </div> -->
-            <div class="form-group">
-              <label class="col-sm-offset-2 col-sm-10">Password awal akan sama dengan nomor telepon</label>
+             <div class="form-group">
+              <label class="col-sm-2 control-label">Track Record</label>
+              <div class="col-sm-10">
+                <input type="text" name="nama" class="form-control" required="true">
+              </div>
+            </div>
+             <div class="form-group">
+              <label class="col-sm-2 control-label">Insentif/hari (8 jam)</label>
+              <div class="col-sm-10">
+                <input type="text" name="nama" class="form-control" required="true">
+              </div>
             </div>
             <div class="form-group">
             <div class="col-sm-2 pull-right">
