@@ -7,8 +7,7 @@
   <h1 style="color: white;">Jakarta Center Management</h1>
   <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
   <div class="row">
-    <div class="col-md-2"><a class="btn btn-info btn-lg col-md-12" href="#" role="button">Link <i class="fa fa-arrow-right"></i></a></div>
-    <div class="col-md-2"><a class="btn btn-warning btn-lg col-md-12" href="#" role="button">Link <i class="fa fa-arrow-right"></i></a></div>
+    <div class="col-md-3"><a class="btn btn-info btn-lg col-md-12" href="#" role="button">Daftar Member <i class="fa fa-arrow-right"></i></a></div>
     </div>
   </div>
   </div>
@@ -17,15 +16,16 @@
 
 <br>
 <section class="canvas-visimisi text-center" id="tentang">
+  <h1 class="display-2 text-center">About Us</h1><br>
   <blockquote class="blockquote">
     <h3 class="mb-0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</h3>
   <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
 </blockquote>
-    <h1 class="display-3"><u>VISI</u></h1>
+    <h1 class="display-3">VISI</h1>
     <div class="container">
         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum maiores optio laudantium earum vel, soluta itaque dolorem quidem ipsum sint rerum fugit asperiores, in porro unde sunt, illo quo ipsa.</p>
         </div> 
-        <h1 class="display-3"><u>MISI</u></h1>
+        <h1 class="display-3">MISI</h1>
     <div class="container">
         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum maiores optio laudantium earum vel, soluta itaque dolorem quidem ipsum sint rerum fugit asperiores, in porro unde sunt, illo quo ipsa.</p>
         </div> 
@@ -74,7 +74,7 @@
       <div class="row">
         <div class="col">
           <div class="canvas-classa">
-          <h2 style="color:white;">Class</h2>
+          <h2 style="color:white;">Grade</h2>
           <h1 style="color:white;">Mawar</h1>
           <div class="row">
             <div class="col-md-6">
@@ -95,7 +95,7 @@
         </div>
         <div class="col">
           <div class="canvas-classb">
-          <h2>Class</h2>
+          <h2>Grade</h2>
           <h1>Melati</h1>
           <div class="row">
             <div class="col-md-6">
@@ -173,7 +173,7 @@
 </section>
 <section class="canvas-client text-center" id="client">
   <div class="container">
-    <h1 class="display-2">Our Clients</h1>
+    <h1 class="display-2">Our Clients</h1><br>
     <div class="row">
       <div class="col-md-4">
         <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
@@ -198,7 +198,7 @@
   </div>
 </section>
 <section class="canvas-contact" id="contact">
-  <div class="container text-center">
+  <div class="container text-center"><br>
     <h1>CONTACT</h1>
     <div class="row kontak">
       <div class="col">
