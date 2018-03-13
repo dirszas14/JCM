@@ -9,8 +9,8 @@
    <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="199">
-	<nav style="transition: padding .3s;" class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent">
+<body data-spy="scroll" data-target=".navbar" data-offset="199" >
+	<nav style="transition: padding .3s;" class="navbar navbar-expand-md fixed-top navbar-dark shrink">
   <a class="navbar-brand" href="<?php echo site_url('') ?>">Jakarta Center Management</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -18,23 +18,25 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto nav-pills">
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#tentang">Tentang</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#tentang') ?>">Tentang</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#services">Services</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#services') ?>">Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#member">Member</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#member') ?>">Member</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#blog">Blog</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#blog') ?>">Blog</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#client">Our Clients</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#client') ?>">Our Clients</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="#contact">Contact</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#contact') ?>">Contact</a>
       </li>
     </ul>
   </div>
 </nav>
+<div class="container mt-5"><br>
+  <h1 class="text-center" style="color: #A93226;">Model Mawar</h1>

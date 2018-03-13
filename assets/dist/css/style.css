@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body {
   position: relative;
 }
@@ -54,14 +55,74 @@ padding:280px 0px;
 	background-color: #343a40;
 }
 .canvas-classa{
-	background-color: #85929E;
+	background-color: #E74C3C;
 	padding: 25px;
 	border-radius: 10px;
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 15px;
 }
 .canvas-classb{
-	background-color: #7F8C8D;
+	background-color: #FBFCFC;
 	padding: 25px;
 	border-radius: 10px;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.overlay-modela {
+  position: absolute;
+  top: 0;
+  bottom: 7px;
+  left: 14px;
+  right: 14px;
+  height: auto;
+  max-width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #A93226;
+  border-radius: 10px;
+}
+
+.overlay-modela:hover {
+  opacity: 0.8;
+}
+.overlay-modelb {
+  position: absolute;
+  top: 0;
+  bottom: 7px;
+  left: 14px;
+  right: 14px;
+  height: auto;
+  max-width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #ECF0F1;
+  border-radius: 10px;
+}
+
+.overlay-modelb:hover {
+  opacity: 0.8;
+}
+
+.text-modela {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-modelb {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
 }
 .panel{
 	margin-bottom: 20px;
@@ -69,7 +130,7 @@ padding:280px 0px;
 .canvas-client {
 	background-color:  #d5dbdb;
 }
-.logo {
+.logo-client {
     -webkit-filter: grayscale(100%);
     -webkit-transition: .5s ease-in-out;
     -moz-filter: grayscale(100%); 
@@ -78,7 +139,7 @@ padding:280px 0px;
     -o-transition: .5s ease-in-out;
 }
 
-.logo:hover {
+.logo-client:hover {
     -webkit-filter: grayscale(0%);
     -webkit-transition: .5s ease-in-out;
     -moz-filter: grayscale(0%);
@@ -86,13 +147,26 @@ padding:280px 0px;
     -o-filter: grayscale(0%);
     -o-transition: .5s ease-in-out;
 } 
-
+.model-photo {
+	border-radius: 10px;
+	height: 250px;
+}
+.active-modelmawar {
+	color: #fff!important;
+	background-color: #A93226 !important;
+	border-color: #A93226;
+}
+.active-modelmawar:hover {
+	color: #fff!important;
+	background-color: #A93226 !important;
+	border-color: #A93226;
+}
 .col-centered{
 	float: none;
     margin: 0 auto;
 }
 .canvas-contact {
-	background: url('../../img/Contact-Us.jpg');
+	background: url('../../img/Contact-Us.png');
 	color: white;
 	background-position: center;
 }

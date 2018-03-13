@@ -48,17 +48,17 @@
 <script src="<?php echo base_url('assets/dist/b4/js/bootstrap.min.js')?>" ></script>
 <script>
 	
-  $(window).scroll(function(){
-    if($(document).scrollTop() > 650){
+ /* $(window).scroll(function(){
+    if($(document).scrollTop() > 10){
       $('nav').addClass('shrink');
     }
     else{
       $('nav').removeClass('shrink');
     }
-  });
+  });*/
 
   // Add scrollspy to <body>
-$('body').scrollspy({target: ".navbar", offset: 50});
+/*$('body').scrollspy({target: ".navbar", offset: 50});
 
 // Add smooth scrolling on all links inside the navbar
 $("#navbarNav a").on('click', function(event) {
@@ -84,6 +84,6 @@ $("#navbarNav a").on('click', function(event) {
 
   } // End if
 
-});
+});*/
 </script>
 </html>

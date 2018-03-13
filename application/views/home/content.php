@@ -1,31 +1,4 @@
-<nav style="transition: padding .3s;" class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent">
-  <a class="navbar-brand" href="#">Jakarta Center Management</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="nav navbar-nav ml-auto nav-pills">
-      <li class="nav-item">
-        <a class="nav-link navbar-list" href="#tentang">Tentang</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link navbar-list" href="#services">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link navbar-list" href="#member">Member</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link navbar-list" href="#blog">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link navbar-list" href="#client">Our Clients</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link navbar-list" href="#contact">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+
 
 <div class="canvas-head" id="home">
   <div class="cover-head">
@@ -65,13 +38,13 @@
    <div class="col">
       <i class="fa fa-users fa-3x" aria-hidden="true"></i>
       <hr>
-      <h3>SPG &amp;SPB</h3>
+      <h3>SPG</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
    <div class="col">
-      <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+      <i class="fa fa-microphone fa-3x" aria-hidden="true"></i>
       <hr>
-      <h3>Usher</h3>
+      <h3>MC</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
    <div class="col">
@@ -81,9 +54,15 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
    <div class="col">
-      <i class="fa fa-music fa-3x" aria-hidden="true"></i>
+      <i class="fa fa-heart fa-3x" aria-hidden="true"></i>
       <hr>
-      <h3>Band &amp; Singer</h3>
+      <h3>Bridesmaid</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
+   </div>
+   <div class="col">
+     <i class="fa fa-search-plus fa-3x" aria-hidden="true"></i>
+      <hr>
+      <h3>Dan Lain-lain</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit reiciendis accusantium exercitationem, sint maxime molestiae officia perferendis illo facilis veniam totam eaque deleniti sequi mollitia esse possimus, aspernatur recusandae. Repudiandae!</p>
    </div>
 </div>
@@ -95,31 +74,45 @@
       <div class="row">
         <div class="col">
           <div class="canvas-classa">
-          <h2 style="color:white;">CLASS A</h2>
+          <h2 style="color:white;">Class</h2>
+          <h1 style="color:white;">Mawar</h1>
           <div class="row">
-            <div class="col">
-               <img class="img-fluid" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+            <div class="col-md-6">
+               <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <div class="overlay-modela">
+                 <div class="text-modela">Chelsea Islan</div>
+               </div>
             </div>
-            <div class="col">
-               <img class="img-fluid" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+            <div class="col-md-6">
+               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <div class="overlay-modela">
+                 <div class="text-modela">Chelsea Islan</div>
+               </div>
             </div>
           </div><br>
-          <a href="#" class="btn btn-info">Lihat Semua</a>
+          <a href="<?php echo site_url('modelmawar/') ?>" class="btn btn-info">Lihat Semua</a>
         </div>
         </div>
         <div class="col">
           <div class="canvas-classb">
-          <h2 style="color: white;">CLASS B</h2>
+          <h2>Class</h2>
+          <h1>Melati</h1>
           <div class="row">
-            <div class="col">
-               <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+            <div class="col-md-6">
+                <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <div class="overlay-modelb">
+                 <div class="text-modelb">Chelsea Islan</div>
+               </div>
             </div>
-            <div class="col">
-              <img class="card-img-top" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+            <div class="col-md-6">
+               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <div class="overlay-modelb">
+                 <div class="text-modelb">Chelsea Islan</div>
+               </div>
             </div>
           </div>
           <br>
-          <a href="#" class="btn btn-info">Lihat Semua</a>
+          <a href="<?php echo site_url('modelmelati') ?>" class="btn btn-info">Lihat Semua</a>
         </div>
       </div>
     </div>
@@ -128,8 +121,8 @@
 <section class="canvas-blog" id="blog">
   <h1 class="display-2 text-center">BLOG</h1>
   <div class="container">
-    <div class="row ">
-      <div class="col">
+    <div class="row pb-2">
+      <div class="col-12 col-md-4">
         <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
         <div class="row">
           <div class="col">
@@ -138,10 +131,14 @@
           <div class="col">
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
         </div>
-      </div>
-      <div class="col">
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
+           <div class="row">
+             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
+           </div>
+           
+        </div>
+      <div class="col-12 col-md-4">
         <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
         <div class="row">
           <div class="col">
@@ -150,10 +147,13 @@
           <div class="col">
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
         </div>
-      </div>
-      <div class="col">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
+          <div class="row">
+             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
+           </div>
+        </div>
+      <div class="col-12 col-md-4">
         <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
         <div class="row">
           <div class="col">
@@ -162,8 +162,11 @@
           <div class="col">
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
         </div>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
+           <div class="row">
+             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
+           </div>
       </div>
     </div>
   </div>
@@ -172,24 +175,24 @@
   <div class="container">
     <h1 class="display-2">Our Clients</h1>
     <div class="row">
-      <div class="col">
-        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      <div class="col-md-4">
+        <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
       </div>
-      <div class="col">
-        <img class="img-fluid logo" src="<?php echo base_url('assets/img/tokopedia.jpg') ?>" alt="">
-      </div><div class="col">
-        <img class="img-fluid logo" src="<?php echo base_url('assets/img/lazada.jpg') ?>" alt="">
+      <div class="col-md-4">
+        <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/tokopedia.jpg') ?>" alt="">
+      </div><div class="col-md-4">
+        <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/lazada.jpg') ?>" alt="">
       </div>
     </div>
     <div class="row">
-      <div class="col">
-        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      <div class="col-md-4">
+        <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
       </div>
-      <div class="col">
-        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      <div class="col-md-4">
+        <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
       </div>
-      <div class="col">
-        <img class="img-fluid logo" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
+      <div class="col-md-4">
+        <img class="img-fluid logo-client" src="<?php echo base_url('assets/img/indosat.png') ?>" alt="">
       </div>
     </div>
   </div>
