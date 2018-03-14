@@ -8,11 +8,16 @@ h1 {
 ul>li>a.navbar-list{
 	font-size: 20px;
 	padding: 0 20px !important;
+	font-family:'Ubuntu', sans-serif;
 
 }
 ul>li>a.navbar-list:hover {
 	border-bottom: 2px solid #d39e00 ; 
 transition-property: left, right;
+}
+
+.navbar-brand{
+	font-family: 'Kaushan Script';
 }
 
 .login-page{
@@ -185,6 +190,7 @@ ul.social-network li {
 	display: inline;
 	margin: 0 5px;
 }
+
 
 
 /* footer sosial media */

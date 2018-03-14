@@ -2,8 +2,11 @@
 
 class DataAnggota_Model extends CI_Model{
 
-	var $db;
-	var $table = "anggota";
+	 public function __construct() 
+     {
+           parent::__construct(); 
+           $this->load->database();
+     }
 
 	function input_data($data,$table){
 		$this->db->insert($table,$data);

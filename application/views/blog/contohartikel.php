@@ -11,12 +11,38 @@
 
 	<div class="container canvas-artikel">
 	<div class="row">
-	<div class="col mt-2">
+	<div class="col-md-8 mt-2">
 		<img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
-		<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores libero aut rerum eos suscipit voluptas voluptate fuga beatae magnam, exercitationem earum error, debitis qui quia ab adipisci nulla aspernatur ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur asperiores minima, repellat tenetur dolorum. Quisquam cumque accusantium, vel, odio numquam, nihil, quia non hic quis ea recusandae ipsa provident!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quam eius ullam velit. Quisquam est eaque voluptas deserunt rerum doloremque, dicta, numquam consequatur asperiores esse, saepe maiores dolore quae nobis.</p>
+     <div class="row text-center">
+          <div class="col-md-6">
+            <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true"></i> admin</p>
+          </div>
+          <div class="col-md-6">
+            <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
+          </div>
+        </div>
+		<h3>Judul Blog </h3>
+		<p><b>ISI BLOG</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores libero aut rerum eos suscipit voluptas voluptate fuga beatae magnam, exercitationem earum error, debitis qui quia ab adipisci nulla aspernatur ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur asperiores minima, repellat tenetur dolorum. Quisquam cumque accusantium, vel, odio numquam, nihil, quia non hic quis ea recusandae ipsa provident!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quam eius ullam velit. Quisquam est eaque voluptas deserunt rerum doloremque, dicta, numquam consequatur asperiores esse, saepe maiores dolore quae nobis.</p>
+     <div class="row">
+    <div class="col-md-6 mb-3">
+      <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+    </div>
+  </div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores libero aut rerum eos suscipit voluptas voluptate fuga beatae magnam, exercitationem earum error, debitis qui quia ab adipisci nulla aspernatur ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur asperiores minima, repellat tenetur dolorum. Quisquam cumque accusantium, vel, odio numquam, nihil, quia non hic quis ea recusandae ipsa provident!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quam eius ullam velit. Quisquam est eaque voluptas deserunt rerum doloremque, dicta, numquam consequatur asperiores esse, saepe maiores dolore quae nobis.</p>
 	</div>
-	<div class="col-4 mt-2">
+ 
+	<div class="col-md-4 mt-2">
 		<h3>Recent Posts</h3>
 		<div class="list-group">
   <a href="#" class="list-group-item list-group-item-action active">
