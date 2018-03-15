@@ -16,6 +16,20 @@ ul>li>a.navbar-list:hover {
 transition-property: left, right;
 }
 
+td {
+    white-space: nowrap;
+}
+
+th {
+    white-space: nowrap;
+    text-align: center;
+}
+
+
+.pb-3, .py-3{
+	padding-bottom: 0 !important;
+}
+
 .navbar-brand{
 	font-family: 'Kaushan Script';
 }
@@ -30,6 +44,7 @@ transition-property: left, right;
 .logo span{
 	font-size: 12px;
 	letter-spacing: 0px;
+	font-family: 'Kaushan Script';
 }
 .canvas-head{
 background: url('../../img/model1.png')  no-repeat  fixed;
