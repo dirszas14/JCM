@@ -21,8 +21,8 @@
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
         </div>
-		<h3>Judul Blog </h3>
-		<p><b>ISI BLOG</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores libero aut rerum eos suscipit voluptas voluptate fuga beatae magnam, exercitationem earum error, debitis qui quia ab adipisci nulla aspernatur ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur asperiores minima, repellat tenetur dolorum. Quisquam cumque accusantium, vel, odio numquam, nihil, quia non hic quis ea recusandae ipsa provident!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quam eius ullam velit. Quisquam est eaque voluptas deserunt rerum doloremque, dicta, numquam consequatur asperiores esse, saepe maiores dolore quae nobis.</p>
+		<h3>Judul Artikel </h3>
+		<p><b>ISI ARTIKEL</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores libero aut rerum eos suscipit voluptas voluptate fuga beatae magnam, exercitationem earum error, debitis qui quia ab adipisci nulla aspernatur ipsam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi aspernatur asperiores minima, repellat tenetur dolorum. Quisquam cumque accusantium, vel, odio numquam, nihil, quia non hic quis ea recusandae ipsa provident!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo quam eius ullam velit. Quisquam est eaque voluptas deserunt rerum doloremque, dicta, numquam consequatur asperiores esse, saepe maiores dolore quae nobis.</p>
      <div class="row">
     <div class="col-md-6 mb-3">
       <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">

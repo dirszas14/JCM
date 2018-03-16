@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Jakarta Center Management</title>
+	<title>Jakarta Center Management - Grade Mawar</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/b4/css/bootstrap.min.css') ?>">
 <!--  <script defer src="<?php echo base_url('assets/plugins/font-awesome/svg-with-js/js/fontawesome-all.js') ?>"></script> -->
    <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
+     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="199" >
@@ -18,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="nav navbar-nav ml-auto nav-pills">
       <li class="nav-item">
-        <a class="nav-link navbar-list" href="<?php echo site_url('/#tentang') ?>">Tentang</a>
+        <a class="nav-link navbar-list" href="<?php echo site_url('/#tentang') ?>">About Us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link navbar-list" href="<?php echo site_url('/#services') ?>">Services</a>
