@@ -51,7 +51,7 @@
 <script>
 	
   $(window).scroll(function(){
-    if($(document).scrollTop() > 450){
+    if($(document).scrollTop() > 50){
       $('nav').addClass('shrink');
     }
     else{
@@ -60,7 +60,7 @@
   });
 
   // Add scrollspy to <body>
-$('body').scrollspy({target: ".navbar", offset: 50});
+$('body').scrollspy({target: ".navbar", offset: 100});
  $('input[name=tgl_lahir').datepicker({ format: 'dd-m-yyyy' });
 // Add smooth scrolling on all links inside the navbar
 $("#navbarNav a").on('click', function(event) {

@@ -12,8 +12,16 @@ ul>li>a.navbar-list{
 
 }
 ul>li>a.navbar-list:hover {
-	border-bottom: 2px solid #d39e00 ; 
+	border-bottom: 2px solid #F95F0C ; 
 transition-property: left, right;
+}
+
+.nav-pills .nav-link.active{
+	background-color: #F95F0C;
+}
+
+a.btn btn-info btn-lg col-md-12{
+	background-color: #F95F0C;
 }
 
 td {
@@ -24,7 +32,6 @@ th {
     white-space: nowrap;
     text-align: center;
 }
-
 
 .pb-3, .py-3{
 	padding-bottom: 0 !important;

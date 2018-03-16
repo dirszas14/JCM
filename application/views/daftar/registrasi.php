@@ -13,7 +13,7 @@
 <form class="form-horizontal" action="<?php echo site_url('crud_anggota/tambahanggota_proses')?>" method='post' enctype="multipart/form-data">
   <div class="form-group">
     <label class="col-sm-2 control-label">Nama Lengkap</label>
-    <div class="col-sm-8">
+    <div class="col-sm-6">
       <input type="text" name="nama" class="form-control" required="true">
     </div>
   </div>
@@ -52,8 +52,8 @@
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Tinggi Badan</label>
-    <div class="col-sm-3 input-group">
-      <input type="text" name="tinggibadan" class="form-control" required="true" placeholder="Cm" maxlength="3" onkeypress="return isNumberKey(event)">
+    <div class="col-sm-2 input-group">
+      <input type="text" name="tinggibadan" class="form-control" required="true" maxlength="3" onkeypress="return isNumberKey(event)">
        <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">CM</span>
   </div>
@@ -61,8 +61,8 @@
 </div>
     <div class="form-group">
     <label class="col-sm-2 control-label">Berat Badan</label>
-    <div class="col-sm-3 input-group">
-      <input type="text" name="beratbadan" class="form-control" required="true" placeholder="Kg" maxlength="3" onkeypress="return isNumberKey(event)">
+    <div class="col-sm-2 input-group">
+      <input type="text" name="beratbadan" class="form-control" required="true" maxlength="3" onkeypress="return isNumberKey(event)">
       <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">KG</span>
     </div>

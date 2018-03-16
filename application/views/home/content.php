@@ -5,9 +5,9 @@
   <div class="container">
     <div class="cover-text">
   <h1 style="color: white;">Jakarta Center Management</h1>
-  <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti cupiditate, sapiente perferendis. Amet reprehenderit, provident reiciendis labore consequatur ut deserunt, id vero obcaecati maxime odio debitis quisquam facilis hic voluptatem.</p>
+  <p style="color: white;">Ingin berkarir di dunia Talent bersama kami ? Daftarkan diri anda</p>
   <div class="row">
-    <div class="col-md-3"><a class="btn btn-info btn-lg col-md-12" href="#" role="button">Daftar Member <i class="fa fa-arrow-right"></i></a></div>
+    <div class="col-md-3"><a class="btn btn-info btn-lg col-md-12" href="<?php echo site_url('daftarmember') ?>" role="button">Registrasi Member <i class="fa fa-arrow-right"></i></a></div>
     </div>
   </div>
   </div>
@@ -19,7 +19,7 @@
   <h1 class="display-2 text-center">About Us</h1><br>
   <blockquote class="blockquote">
     <h3 class="mb-0">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."</h3>
-  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+  <footer class="blockquote-footer">MOTTO <cite title="Source Title">JCM</cite></footer>
 </blockquote>
     <h1 class="display-3">VISI</h1>
     <div class="container">
@@ -69,7 +69,8 @@
     </div>
   </section>
   <section class="canvas-anggota text-center" id="member">
-    <h1 style="color: white;">Member</h1>
+    <br>
+    <h1 style="color: white ; font-family:'Ubuntu', sans-serif;">Member</h1>
     <div class="container-fluid">
       <div class="row">
         <div class="col">
@@ -132,6 +133,7 @@
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
         </div>
+        <h3>Judul Artikel </h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
            <div class="row">
              <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
@@ -148,6 +150,7 @@
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
         </div>
+        <h3>Judul Artikel </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
           <div class="row">
              <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
@@ -163,6 +166,7 @@
             <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
           </div>
         </div>
+        <h3>Judul Artikel </h3>
            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
            <div class="row">
              <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
@@ -202,10 +206,10 @@
     <h1>CONTACT</h1>
     <div class="row kontak">
       <div class="col">
-        <h2>Telepon: <i class="fa fa-phone" aria-hidden="true"></i> 082274374344</h2>
+        <h2>Phone: <i class="fa fa-phone" aria-hidden="true"></i> 08xxxxxxx</h2>
       </div>
       <div class="col">
-        <h2>Telepon: <i class="fa fa-map-marker" aria-hidden="true"></i> Jl. Gallangung NO.47</h2>
+        <h2>Alamat: <i class="fa fa-map-marker" aria-hidden="true"></i> Jl. .....</h2>
       </div>
     </div>
   </div>
