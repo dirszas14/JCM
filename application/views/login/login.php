@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css')?>">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/Ionicons/css/ionicons.min.css')?>">
   <!-- Theme style -->
@@ -58,7 +59,7 @@
       <div class="row">
         <!-- /.col -->
         <div class="col-xs-offset-8 col-xs-4">
-          <button type="submit" name="login" class="btn btn-primary"  aria-label="Center Align">
+          <button type="submit" name="login" class="btn btn-primary btn-block btn-flat"  aria-label="Center Align">
             LOGIN   <span class="fa fa-sign-in" aria-hidden="true"></span>
           </button>
         </div>

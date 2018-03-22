@@ -1,6 +1,3 @@
-<div class="wrapper">
-  <body class="hold-transition skin-blue sidebar-mini">
-
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
@@ -25,7 +22,7 @@
     <!-- Main content -->
     <section class="content">
 		  <!-- Default box -->
-      <div class="box box-solid box-primary">
+      <div class="box box-solid box-default">
       <!-- box header -->
         <div class="box-header with-border">
           <h3 class="box-title">Ubah Password</h3>
@@ -37,15 +34,9 @@
           </div>
         </div>
         <!-- box body -->
-<!--         <?php
-$nip=$_SESSION['nip'];
-$sql= "SELECT * FROM user WHERE nip='$nip' ";
-$query = mysqli_query($koneksi,$sql);
-$row = mysqli_fetch_assoc($query);
-?> -->
         <div class="box-body">
          
-          <form class="form-horizontal" action="../../function/user-model.php" method='post'>
+          <form class="form-horizontal" action="<?php echo site_url('crud_user/ubahpassword')?>" method='post'>
             <div class="form-group">
               <label class="col-sm-2 control-label">Password Baru</label>
               <div class="col-sm-10">
@@ -59,7 +50,7 @@ $row = mysqli_fetch_assoc($query);
               </div>
             </div> 
             <div class=" pull-right">
-              <input type="hidden" name="nip" value="<?php echo $nip?>">
+              <input type="hidden" name="id_user" value="<?php echo $this->session->userdata('id_user'); ?>">
               <button type="submit" class="btn btn-primary" name="editpassword">Simpan</button>
             </div>
           

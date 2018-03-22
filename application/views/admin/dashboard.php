@@ -1,9 +1,3 @@
-  
-	<div class="wrapper">
-	<body class="hold-transition skin-blue sidebar-mini">
-
-	  <!-- =============================================== -->
-
 	  <!-- Left side column. contains the sidebar -->
 	  <div class="content-wrapper">
 	    <!-- Content Header (Page header) -->
@@ -30,56 +24,127 @@
             <a href="dashboard.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div> -->
+        <div class="row">
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-blue">
+            <div class="inner">
+              <h3><?=$totaluser?></h3>
 
-
-
-		
-      <div class="box box-primary">
-      <!-- box header -->
-        <div class="box-header with-border">
-          <h3 class="box-title">Detail detail detail</h3>
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                    title="Collapse">
-              <i class="fa fa-minus"></i></button>
-            
+              <p>Total User</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-users"></i>
+            </div>
+            <a href="<?php echo base_url('admin/user') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-        <!-- box body -->
-        <div class="box-body">
-          
-        <!-- <br>
-        <div class="box-body table-responsive no-padding">
-          <table class="table table-hover table-bordered table-striped text-center table-data" id="contoh" width="100%">
-            <thead>
-             <tr>
-               <th>NO.</th>
-                <th>KODE HASIL</th>
-                <th>JENIS PEMELIHARAAN</th>
-                <th>Tanggal Pemeliharaan</th>
-                <th>NAMA ALAT</th>
-                <th>TIPE</th>
-                <th>MEREK</th>
-                <th>NAMA LOKASI</th>
-                <th>LANTAI</th>
-                <th>PELAKSANA</th>
-                <th>KETERANGAN</th>
-              </tr>
-            </thead>
-            <tbody>
-          
-          <tr>
-                
-            </tbody>
-          </table>
-        </div> -->
-      </div>
-        
-     
 
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3><?=$totalmawar?></h3>
+
+              <p>Total Member Mawar</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-user-o"></i>
+            </div>
+            <a href="<?php echo base_url('admin/anggota') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-gray">
+            <div class="inner">
+              <h3><?=$totalmelati?></h3>
+
+              <p>Total Member Melati</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-user-o"></i>
+            </div>
+            <a href="<?php echo base_url('admin/anggota') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+
+       <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-teal">
+            <div class="inner">
+              <h3><?=$totalartikel?></h3>
+
+              <p>Total Artikel</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-newspaper-o"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </div>
       
-				</div>
+      <div class="row">
+      <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3><?=$totalapproval?></h3>
+
+              <p>Members Approval</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-check"></i>
+            </div>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+       <div class="row">
+      <div class="col-md-6">
+              <!-- USERS LIST -->
+              <div class="box box-danger">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Member Terbaru</h3>
+
+                  <div class="box-tools pull-right">
+                    <span class="label label-danger"><?=$totalanggotaterbaru?> New Members</span>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                  <ul class="users-list clearfix">
+                    <?php 
+                     $no = 1;
+                      foreach($anggotaterbaru as $x){ 
+                      ?>
+                    <li>
+                      <img src="<?php echo base_url('assets/dist/img/user.png')?>" alt="User Image">
+                      <a class="users-list-name" href="#"><?=$x->nama?></a>
+                      <span class="users-list-date">Today</span>
+                    </li>
+                    <?php } ?>
+                  </ul>
+                  <!-- /.users-list -->
+                </div>
+                 <div class="box-footer text-center">
+                  <a href="javascript:void(0)" class="uppercase">View All Users</a>
+                </div>
+
+</div>
+         
 			</div>
+    </div>
+
      
 	    </section>
 	    <!-- /.content -->

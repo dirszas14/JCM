@@ -31,11 +31,14 @@
               <li class="user-header">
                 <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="img-circle" alt="User Image">
                 <p>
-                    
+                     <?=$this->session->userdata('nama')?> - <?=$this->session->userdata('level')?>
                 </p>
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
+                <div class="pull-left">
+                  <a href="<?php echo site_url('Admin/logout') ?>" class="btn btn-default btn-flat">Profile</a>
+                </div>
                 <div class="pull-right">
                   <a href="<?php echo site_url('Admin/logout') ?>" class="btn btn-default btn-flat">Log Out</a>
                 </div>
@@ -47,3 +50,4 @@
       </div>
     </nav>
   </header>
+
