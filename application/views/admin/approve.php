@@ -1,16 +1,14 @@
-<div class="wrapper">
-  <body class="hold-transition skin-blue sidebar-mini">
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
         Keanggotaan Jakarta Center Management
         </h1>
-        <br>
+
         <!-- Main content -->
         <section class="content">
           <!-- Default box -->
-          <div class="box box-solid box-primary">
+          <div class="box box-solid box-default">
             <!-- box header -->
             <div class="box-header with-border">
               <h3 class="box-title">Approval List</h3>
@@ -27,52 +25,46 @@
                   <thead>
                     <tr>
                       <th>NO</th>
-                      <th>NAMA ANGGOTA</th>
-                      <th>TEMPAT LAHIR</th>
-                      <th>TANGGAL LAHIR</th>
+                      <th>ID ANGGOTA</th>
+                      <th>NAMA</th>
                       <th>USIA</th>
-                      <th>TINGGI/BERAT</th>
-                      <th>TRACK RECORD</th>
-                      <th>KELAS</th>
-                      <th>NO TELP</th>
+                      <th>TEMPAT, TANGGAL LAHIR</th>
+                      <th>NO. HP</th>
+                      <th>DOMISILI</th>
+                      <th>CM/KG</th>
+                      <th>STATUS</th>
+                      <th>GRADE</th>
+                      <th>INSENTIF</th>
+                      <th></th>
                       <th></th>
                       <th></th>
                     </tr>
                   </thead>
                   <tbody>
+                    <?php
+                     $no = 1;
+                     foreach($approve as $x){
+                     ?>
                     <tr>
-                      <td>1</td>
-                      <td>Tes</td>
-                      <td>Jakarta</td>
-                      <td>09 Maret 1990</td>
-                      <td>27</td>
-                      <td>165/70</td>
-                      <td>lorem ipsum dolor sit amet</td>
-                      <td>A</td>
-                      <td>088888888</td>
-                      <td><a method="POST" href="#" class="btn btn-warning">Approve</a>
-                      <input type="hidden" name="nip" value="#"></td>
-                      <td>
-                        <a method="post" href="#" class="btn btn-danger">Tolak</a>
-                        <input type="hidden" name="nip" value="#">
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Tes2</td>
-                      <td>Jakarta</td>
-                      <td>09 Maret 1990</td>
-                      <td>27</td>
-                      <td>165/70</td>
-                      <td>lorem ipsum dolor sit amet</td>
-                      <td>A</td>
-                      <td>088888888</td>
-                      <td><a method="POST" href="#" class="btn btn-warning">Approve</a>
-                      <input type="hidden" name="nip" value="#"></td>
-                      <td><a method="post" href="#" class="btn btn-danger">Tolak</a>
+                      <td align="Center"><?=$no++ ?></td>
+                      <td><?=$x->id_anggota?></td>
+                      <td><?=$x->nama?></td>
+                      <td><?=$x->usia.' Tahun' ?></td>
+                      <td><?=$x->tempat_lahir.', '.$x->tgl_lahir  ?></td>
+                      <td><?=$x->no_telp?></td>
+                      <td><?=$x->kota_domisili?></td>
+                      <td><?=$x->tinggi_badan.'/'.$x->berat_badan ?></td>
+                      <td><?=$x->status?></td>
+                      <td><?=$x->grade?></td>
+                      <td><?php $format_angka = number_format($x->insentif, "2", ",", ".");
+                            echo "Rp. ".$format_angka; ?></td>
+                      <td><a href="<?php echo site_url('crud_anggota/hapus_anggota/',$x->id_anggota)?>" class="btn btn-info">Approve</a>
+                      <input type="hidden" name="id_anggota" value="<?php echo $x->id_anggota;?>"></td>
+                      <td><a  href="<?=site_url("Crud_anggota/hapus_anggota/$x->id_anggota")?>" class="btn btn-danger">Tolak</a>
                       <input type="hidden" name="nip" value="#">
                     </td>
-                  </tr>
+                    </tr>
+                  <?php } ?>
                 </tbody>
               </table>
             </div>

@@ -70,13 +70,13 @@
   </section>
   <section class="canvas-anggota text-center" id="member">
     <br>
-    <h1 style="color: white ; font-family:'Ubuntu', sans-serif;">Member</h1>
+    <h1 style="color: white ; font-family:'Ubuntu', sans-serif;">Member</h1><br>
     <div class="container-fluid">
       <div class="row">
         <div class="col">
           <div class="canvas-classa">
-          <h2 style="color:white;">Grade</h2>
-          <h1 style="color:white;">Mawar</h1>
+          
+          <h1 style="color:white;">Mawar</h1><br>
           <div class="row">
             <div class="col-md-6">
                <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
@@ -96,8 +96,8 @@
         </div>
         <div class="col">
           <div class="canvas-classb">
-          <h2>Grade</h2>
-          <h1>Melati</h1>
+          
+          <h1 style="color:white;">Melati</h1><br>
           <div class="row">
             <div class="col-md-6">
                 <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">

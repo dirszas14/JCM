@@ -11,17 +11,16 @@
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap/dist/css/bootstrap.min.css') ?>">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css')?>">
+ <!--  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/fontawesome-5/web-fonts-with-css/css/fontawesome-all.min.css')?>"> -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')?>">
   <!-- Theme style -->
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/AdminLTE.css')?>">
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
+  <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/skins/skin-blue.css') ?>">
+  <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/skins/skin-red.min.css') ?>">
   <!-- datatable -->
-  <!--  <link rel="stylesheet" href="../../assets/bower_components/datatables/css/dataTables.bootstrap.min.css"> -->
-  <!-- Date Picker -->
-  <!-- <link rel="stylesheet" href="../../assets/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css"> -->
-
-  <link rel="stylesheet" href="../../assets/dist/css/custom.css">
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css')?>">
 
 </head>
