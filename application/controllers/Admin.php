@@ -56,6 +56,16 @@ public function user()
 		$this->load->view('admin/footer');
 	}
 
+public function profileuser()
+  {
+  	$data['profileuser'] = $this->datauser_model->profileuser();
+  	$this->load->view('admin/header');
+  	$this->load->view('admin/headermain');
+  	$this->load->view('admin/asidebar');
+  	$this->load->view('admin/profileuser',$data);
+  	$this->load->view('admin/footer');
+	}
+
 public function ubahpassword()
 	{
 		$this->load->view('admin/header');

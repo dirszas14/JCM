@@ -1,5 +1,5 @@
 		</div>
-		<div class="col-10">
+		<div class="col-12 col-md-10">
 			<div class="row pb-3">
 				<div class="col-12 col-md-4">
 					<img class="img-fluid model-photo" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">

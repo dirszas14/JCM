@@ -1,16 +1,16 @@
-<?php 
- 
- 
+<?php
+
+
 class Crud_user extends CI_Controller{
- 
+
 	function __construct(){
-		parent::__construct();		
+		parent::__construct();
 		$this->load->model('datauser_model');
 		$this->load->helper('url');
 	}
- 
+
 	public function index(){
-		
+
 	}
 
 	function tambahuser_proses(){
@@ -23,7 +23,7 @@ class Crud_user extends CI_Controller{
 		$no_telp = $this->input->post('no_telp');
 		$password = $this->input->post('no_telp');
 		$level = $this->input->post('level');
- 
+
 		$data = array(
 			'id_user' => $id_user,
 			'nama' => $nama,
@@ -35,19 +35,19 @@ class Crud_user extends CI_Controller{
 		redirect('Admin/anggota');
 		$this->session->set_flashdata('Berhasil', 'true');
 	}
- 	
+
  	public function ubahpassword(){
 	$id_user = $this->input->post('id_user');
 	$password = $this->input->post('password');
- 
+
 	$data = array(
 		'password' => md5($password)
 	);
- 
+
 	$where = array(
 		'id_user' => $id_user
 	);
- 
+
 	$this->datauser_model->ubahpassword($where,$data,'user');
 	$this->session->set_flashdata('Berhasil', 'true');
 	redirect('Admin/ubahpassword');
@@ -55,6 +55,16 @@ class Crud_user extends CI_Controller{
 
 public function hapus_user($id_user){
 		  $this->datauser_model->hapus_datauser($id_user);
-		  redirect('Admin/anggota');
+		  redirect('Admin/user');
  	}
+
+  public function profile_user($id_user){
+  		  $this->datauser_model->profileuser($id_user);
+  		  redirect('Admin/profileuser');
+   	}
+
+public function reset_pw($id_user){
+  		 $this->datauser_model->hapus_datauser($id_user);
+  		 redirect('Admin/anggota');
+   }
 }

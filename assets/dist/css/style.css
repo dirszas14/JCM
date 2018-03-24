@@ -4,6 +4,7 @@ body {
 }
 h1 {
 	font-size: 55px;
+	font-color:white;
 }
 ul>li>a.navbar-list{
 	font-size: 20px;
@@ -17,10 +18,6 @@ transition-property: left, right;
 }
 
 .nav-pills .nav-link.active{
-	background-color: #F95F0C;
-}
-
-a.btn btn-info btn-lg col-md-12{
 	background-color: #F95F0C;
 }
 
@@ -42,11 +39,12 @@ th {
 }
 
 .login-page{
-	background-color: #3c8dbc;
+	background-color:#dd4b39;
 }
 .login-logo{
 	color: #FAFAFA;
 	font-size: 39px;
+	font-family: 'Kaushan Script'
 }
 .logo span{
 	font-size: 12px;
@@ -82,14 +80,14 @@ padding:280px 0px;
 	background-color: #343a40;
 }
 .canvas-classa{
-	background-color: #E74C3C;
+	background-color: #F95F0C;
 	padding: 25px;
 	border-radius: 10px;
 	font-family: 'Montserrat', sans-serif;
 	margin-bottom: 15px;
 }
 .canvas-classb{
-	background-color: #FBFCFC;
+	background-color: #F95F0C;
 	padding: 25px;
 	border-radius: 10px;
 	color: black;

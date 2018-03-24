@@ -19,7 +19,7 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-          
+
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -36,8 +36,11 @@
               </li>
               <!-- Menu Footer-->
               <li class="user-footer">
+                 <?php
+                 $id_user=$this->session->userdata('id_user');
+                 ?>
                 <div class="pull-left">
-                  <a href="<?php echo site_url('Admin/logout') ?>" class="btn btn-default btn-flat">Profile</a>
+                  <a href="<?php echo site_url("Crud_user/profileuser/$id_user")?>" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?php echo site_url('Admin/logout') ?>" class="btn btn-default btn-flat">Log Out</a>
@@ -45,9 +48,8 @@
               </li>
             </ul>
           </li>
-       
+
         </ul>
       </div>
     </nav>
   </header>
-

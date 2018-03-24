@@ -61,11 +61,8 @@
                   <td><?=$u->level?></td>
                   <td><?=$u->no_telp?></td>
                   <td><a method="POST" href="#" class="btn btn-info">Detail</a>
-                  <input type="hidden" name="nip" value="#"></td>
-                  <td><a method="POST" href="#" class="btn btn-warning">Ubah</a>
-                  <input type="hidden" name="nip" value="#"></td>
+                  <td><a href="<?=site_url("Email/send")?>" class="btn btn-warning">Reset Password</a>
                   <td><a href="<?=site_url("Crud_user/hapus_user/$u->id_user")?>" class="btn btn-danger">Hapus</a>
-                  <input type="hidden" name="nip" value="#">
                   </td>
               </tr>
               <?php } ?>
