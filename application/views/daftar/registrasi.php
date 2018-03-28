@@ -1,6 +1,6 @@
 <div class="canvas-head" id="home">
   <div class="cover-head">
-  <div class="container" > 
+  <div class="container" >
     <div class="cover-text" style="padding:180px 0px; text-align: center;">
   <h1 style="color: white;">Jakarta Center Management</h1>
   <h1 style="color: white;"> Registrasi Anggota</h1>
@@ -10,11 +10,17 @@
 </div>
 <div class="container registrasi"><br>
 <h4>Form Registrasi Anggota</h4><br>
-<form class="form-horizontal" action="<?php echo site_url('crud_anggota/tambahanggota_proses')?>" method='post' enctype="multipart/form-data">
+<form class="form-horizontal" action="<?php echo site_url('crud_anggota/regisanggota_proses')?>" method='post' enctype="multipart/form-data">
   <div class="form-group">
     <label class="col-sm-2 control-label">Nama Lengkap</label>
     <div class="col-sm-6">
       <input type="text" name="nama" class="form-control" required="true">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Email Aktif</label>
+    <div class="col-sm-6">
+      <input type="text" name="email" class="form-control" required="true">
     </div>
   </div>
   <div class="form-group">
@@ -27,7 +33,7 @@
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-2 control-label">No. HP</label>
+    <label class="col-sm-2 control-label">No. HP Aktif</label>
     <div class="col-sm-4">
       <input type="text" name="no_telp" class="form-control" required="true" maxlength="13" onkeypress="return isNumberKey(event)">
     </div>
@@ -128,5 +134,3 @@
   </div>
 </form>
 </div>
-
-

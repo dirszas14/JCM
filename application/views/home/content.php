@@ -23,12 +23,12 @@
 </blockquote>
     <h1 class="display-3">VISI</h1>
     <div class="container">
-        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum maiores optio laudantium earum vel, soluta itaque dolorem quidem ipsum sint rerum fugit asperiores, in porro unde sunt, illo quo ipsa.</p>
-        </div> 
+        <p class="text-justify">Menjadi Agency terdepan dan terpercaya di Indonesia dalam bidang penyedia jasa SPG dan Modeling dengan kualitas pelayanan terbaik yang dapat memberikan kontribusi nyata bagi pengguna jasa</p>
+        </div>
         <h1 class="display-3">MISI</h1>
     <div class="container">
         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum maiores optio laudantium earum vel, soluta itaque dolorem quidem ipsum sint rerum fugit asperiores, in porro unde sunt, illo quo ipsa.</p>
-        </div> 
+        </div>
   </section>
   <section class="canvas-services text-center" id="services">
     <div class="container">
@@ -75,7 +75,7 @@
       <div class="row">
         <div class="col">
           <div class="canvas-classa">
-          
+
           <h1 style="color:white;">Mawar</h1><br>
           <div class="row">
             <div class="col-md-6">
@@ -96,7 +96,7 @@
         </div>
         <div class="col">
           <div class="canvas-classb">
-          
+
           <h1 style="color:white;">Melati</h1><br>
           <div class="row">
             <div class="col-md-6">
@@ -138,7 +138,7 @@
            <div class="row">
              <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
            </div>
-           
+
         </div>
       <div class="col-12 col-md-4">
         <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">

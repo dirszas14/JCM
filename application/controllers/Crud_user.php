@@ -59,12 +59,62 @@ public function hapus_user($id_user){
  	}
 
   public function profile_user($id_user){
-  		  $this->datauser_model->profileuser($id_user);
-  		  redirect('Admin/profileuser');
+  		  $query = $this->datauser_model->profileuser($id_user);
+  		  $data['id_user'] = $query['id_user'];
+  		  $data['nama'] = $query['nama'];
+  		  $data['level'] = $query['level'];
+  		  $data['no_telp'] = $query['no_telp'];
+				$data['foto'] = $query['foto'];
+				$data['namauser'] = $this->datauser_model->nama_user();
+  		  $this->load->view('admin/header');
+		  $this->load->view('admin/headermain',$data);
+		  $this->load->view('admin/asidebar',$data);
+		  $this->load->view('admin/profileuser',$data);
+		  $this->load->view('admin/footer');
    	}
 
 public function reset_pw($id_user){
   		 $this->datauser_model->hapus_datauser($id_user);
   		 redirect('Admin/anggota');
    }
+
+public function update_profile(){
+	$id_user = $this->input->post('id_user');
+	$nama = $this->input->post('nama');
+	$no_telp = $this->input->post('no_telp');
+
+			$config = [
+				 'upload_path' => './assets/img/',
+				 'allowed_types' => 'gif|jpg|png',
+				 'max_size' => 1000,
+				 'max_width' => 1000,
+				 'max_height' => 1000
+			 ];
+
+			 $this->load->library('upload', $config);
+			 $this->upload->overwrite = true;
+			 if (!$this->upload->do_upload('fotoprofile')) //jika gagal upload
+			 {
+					 $error = array('error' => $this->upload->display_errors()); //tampilkan error
+					 $this->load->view('Admin/errorupload', $error);
+			 } else
+			 //jika berhasil upload
+			 {
+				 $gbr = $this->upload->data();
+
+	$data = array(
+		'nama' => $nama,
+		'no_telp' => $no_telp,
+		'foto' => $gbr['file_name']
+	);
+
+	$where = array(
+		'id_user' => $id_user
+	);
+
+	$this->datauser_model->update_profile($where,$data,'user');
+	redirect('Admin');
+}
+}
+
 }

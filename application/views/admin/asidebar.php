@@ -4,13 +4,17 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="img-circle" alt="User Image">
+        <img src="<?=base_url()?>assets/img/<?=$namauser['foto'];?>" class="img-circle" alt="User Image">
       </div>
       <div class="pull-left info">
-        <p><?php echo $this->session->userdata('nama'); ?></p>
+         <?php
+                 $id_user=$this->session->userdata('id_user');
+                 ?>
+        <p><a href="<?php echo site_url("Crud_user/profile_user/$id_user")?>"> <?php echo $namauser['nama']; ?></a></p>
         <i class="fa fa-circle text-success"></i> Online
       </div>
     </div>
+
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu tree" data-widget="tree">
       <li class="header">NAVIGASI UTAMA</li>

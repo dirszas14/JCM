@@ -2,7 +2,7 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-    User Jakarta Center Management
+    Profile Saya
     </h1>
 
       <?php if ($this->session->flashdata('info')): ?>
@@ -19,7 +19,7 @@
   <div class="box box-solid box-default">
     <!-- box header -->
     <div class="box-header with-border">
-      <h3 class="box-title">Daftar User</h3>
+      <h3 class="box-title">Detail Profile</h3>
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
         title="Collapse">
@@ -29,23 +29,32 @@
     </div>
     <!-- box body -->
     <div class="box-body">
-      <form class="form-horizontal" action="<?php echo site_url('crud_user/tambahuser_proses')?>" method='post' enctype="multipart/form-data">
+      <form class="form-horizontal" action="<?php echo site_url('crud_user/update_profile')?>" method='post' enctype="multipart/form-data">
   <div class="form-group">
     <label class="col-sm-2 control-label">Nama</label>
     <div class="col-sm-8">
-      <input type="text" name="nama" class="form-control" required="true">
+      <input type="text" name="nama" class="form-control" value="<?=$nama?>" required="true">
+    </div>
+    <div class="col-sm-4">
+      <input type="hidden" name="id_user" class="form-control" value="<?=$id_user?>" required="true">
     </div>
   </div>
    <div class="form-group">
     <label class="col-sm-2 control-label">Level</label>
     <div class="col-sm-8">
-    <input type="text" name="nama" class="form-control" required="true" disabled>
+    <input type="text" name="nama" class="form-control" value="<?=$level?>" required="true" disabled>
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">No.Telp</label>
     <div class="col-sm-8">
-      <input type="text" name="no_telp" class="form-control" required="true">
+      <input type="text" name="no_telp" class="form-control" value="<?=$no_telp?>" required="true">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Foto Profile</label>
+    <div class="col-sm-8">
+      <input type="file" name="fotoprofile" value="<?=$foto?>" required="true">
     </div>
   </div>
   <div class="form-group">

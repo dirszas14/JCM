@@ -8,7 +8,11 @@ class dataanggota_model extends CI_Model{
            $this->load->database();
      }
 
-	function input_data($data,$table){
+	public function input_data($data,$table){
+		$this->db->insert($table,$data);
+	}
+
+	public function regis_data($data,$table){
 		$this->db->insert($table,$data);
 	}
 
@@ -33,6 +37,10 @@ class dataanggota_model extends CI_Model{
 		return $query->num_rows();
     }
 
+		public function approveanggota($where,$data,$table){
+			$this->db->where($where);
+		  $this->db->update($table,$data);
+	}
 
     public function totalmawar()
     {
@@ -110,9 +118,28 @@ class dataanggota_model extends CI_Model{
 		  return $kodemax;
 	}
 
-	public function hapus_dataanggota($id_anggota){
-	  $this->db->where('id_anggota',$id_anggota);
+	public function hapus_dataanggota($id){
+	  $this->db->where('id',$id);
 	  return $this->db->delete('anggota');
  	}
+
+	function data_mawar($number,$offset){
+		$this->db->where('grade','Mawar');
+		return $this->db->get('anggota',$number,$offset)->result();
+}
+
+	function jumlah_data_mawar(){
+		$this->db->where('grade','Mawar');
+		return $this->db->get('anggota')->num_rows();
+}
+
+	public function approvedetail($id)
+ {
+	 $this->db->select('*');
+	$this->db->from('anggota');
+	$this->db->where('id',$id);
+	$query = $this->db->get();
+	return $query->row_array();
+ }
 
 }

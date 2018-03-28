@@ -18,7 +18,7 @@ class datauser_model extends CI_Model{
    		$this->db->from('user');
       $this->db->where('id_user',$id_user);
    		$query = $this->db->get();
- 		return $query->result();
+ 		return $query->row_array();
      }
 
     public function ubahpassword($where,$data,$table){
@@ -37,4 +37,18 @@ class datauser_model extends CI_Model{
 		$query = $this->db->get();
 		return $query->num_rows();
  	}
+
+	public function update_profile($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+
+	public function nama_user(){
+		$idsession = $this->session->userdata('id_user');
+		$this->db->select('*');
+		$this->db->from('user');
+			$this->db->where('id_user',$idsession);
+		$query = $this->db->get();
+		return $query->row_array();
+	}
 }

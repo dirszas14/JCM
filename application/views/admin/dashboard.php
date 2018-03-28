@@ -7,23 +7,10 @@
 	        <small>Informasi</small>
 	      </h1>
 	    </section>
-	    
+
 
 	      <section class="content">
-     <!--  <div class="row">
-      <div class="col-sm-4">
-          <div class="small-box bg-blue">
-            <div class="inner">
-              <h2><?= date('F Y'); ?></h2>
-              <br>
-              <p>Calendar</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-calendar"></i>
-            </div>
-            <a href="dashboard.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div> -->
+
         <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -87,7 +74,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="row">
       <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -104,7 +91,7 @@
           </div>
         </div>
       </div>
-      
+
        <div class="row">
       <div class="col-md-6">
               <!-- USERS LIST -->
@@ -123,9 +110,9 @@
                 <!-- /.box-header -->
                 <div class="box-body no-padding">
                   <ul class="users-list clearfix">
-                    <?php 
+                    <?php
                      $no = 1;
-                      foreach($anggotaterbaru as $x){ 
+                      foreach($anggotaterbaru as $x){
                       ?>
                     <li>
                       <img src="<?php echo base_url('assets/dist/img/user.png')?>" alt="User Image">
@@ -141,23 +128,22 @@
                 </div>
 
 </div>
-         
+
 			</div>
     </div>
 
-     
+
 	    </section>
 	    <!-- /.content -->
 	  </div>
 
 	  <!-- =============================================== -->
-	 
+
 	  <div class="control-sidebar-bg"></div>
 	</div>
 
 
 
 	<script type="text/javascript">
-		
-	</script>
 
+	</script>

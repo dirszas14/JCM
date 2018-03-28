@@ -71,13 +71,9 @@
                       <td><?=$x->grade?></td>
                       <td><?php $format_angka = number_format($x->insentif, "2", ",", ".");
                             echo "Rp. ".$format_angka; ?></td>
-                      <td><a  href="<?=site_url("Crud_anggota/hapus_anggota/$x->id_anggota")?>" class="btn btn-info">Detail</a>
-                      <input type="hidden" name="nip" value="#">
-                      </td>
+                      <td><a href="<?=site_url("Crud_anggota/hapus_anggota/$x->id")?>" class="btn btn-info">Detail</a></td>
                       <td><a href="<?php echo site_url('crud_anggota/hapus_anggota/',$x->id_anggota)?>" class="btn btn-warning">Ubah</a>
-                      <input type="hidden" name="id_anggota" value="<?php echo $x->id_anggota;?>"></td>
-                      <td><a  href="<?=site_url("Crud_anggota/hapus_anggota/$x->id_anggota")?>" class="btn btn-danger">Hapus</a>
-                      <input type="hidden" name="nip" value="#">
+                      <td><a href="<?=site_url("Crud_anggota/hapus_anggota/$x->id")?>" class="btn btn-danger">Hapus</a>
                     </td>
                   </tr>
                 <?php } ?>

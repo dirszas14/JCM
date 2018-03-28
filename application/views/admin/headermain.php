@@ -23,15 +23,15 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php echo $this->session->userdata('nama'); ?></span>
+              <img src="<?=base_url()?>assets/img/<?=$namauser['foto'];?>" class="user-image" alt="User Image">
+              <span class="hidden-xs"><?=$namauser['nama']; ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?php echo base_url('assets/dist/img/user.png')?>" class="img-circle" alt="User Image">
+                <img src="<?=base_url()?>assets/img/<?=$namauser['foto'];?>" class="img-circle" alt="User Image">
                 <p>
-                     <?=$this->session->userdata('nama')?> - <?=$this->session->userdata('level')?>
+                     <?=$namauser['nama']; ?> - <?=$this->session->userdata('level')?>
                 </p>
               </li>
               <!-- Menu Footer-->
@@ -40,7 +40,7 @@
                  $id_user=$this->session->userdata('id_user');
                  ?>
                 <div class="pull-left">
-                  <a href="<?php echo site_url("Crud_user/profileuser/$id_user")?>" class="btn btn-default btn-flat">Profile</a>
+                  <a href="<?php echo site_url("Crud_user/profile_user/$id_user")?>" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?php echo site_url('Admin/logout') ?>" class="btn btn-default btn-flat">Log Out</a>
