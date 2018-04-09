@@ -97,7 +97,7 @@
         <div class="col">
           <div class="canvas-classb">
 
-          <h1 style="color:white;">Melati</h1><br>
+          <h1 style="color:black;">Melati</h1><br>
           <div class="row">
             <div class="col-md-6">
                 <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
@@ -123,7 +123,7 @@
   <h1 class="display-2 text-center">BLOG</h1>
   <div class="container">
     <div class="row pb-2">
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 text-center">
         <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
@@ -140,7 +140,7 @@
            </div>
 
         </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 text-center">
         <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
@@ -156,7 +156,7 @@
              <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
            </div>
         </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-4 text-center">
         <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
