@@ -14,9 +14,29 @@ class dataartikel_model extends CI_Model{
 
 	public function tampilartikel()
     {
-      $sql = "SELECT * FROM artikel ORDER BY id_artikel DESC";
-			$query = $this->db->query($sql);
-			return $query->result();
+      $sql = "SELECT artikel.id_artikel, artikel.judul_artikel, kategori.kategori, user.nama, artikel.tanggal 
+      		  FROM artikel 
+      		  INNER JOIN kategori on artikel.id_kategori = kategori.id_kategori
+      		  INNER JOIN user on artikel.id_user = user.id_user
+      		  ORDER BY artikel.judul_artikel";
+			  $query = $this->db->query($sql);
+			  return $query->result();
+    }
+
+    public function tampilkategori(){
+    	$this->db->select('*');
+    	$this->db->from('kategori');
+    	$query = $this->db->get();
+    	return $query->result();
+    }
+
+    public function editartikel($id_artikel)
+    {
+        $this->db->select('*');
+		$this->db->from('artikel');
+		$this->db->where('id_artikel',$id_artikel);
+		$query = $this->db->get();
+		return $query->row_array();
     }
 
     public function totalartikel()
@@ -58,5 +78,15 @@ class dataartikel_model extends CI_Model{
 	  $this->db->where('id_artikel',$id_artikel);
 	  return $this->db->delete('artikel');
  	}
+
+ 	public function hapus_datakategori($id_kategori){
+	  $this->db->where('id_kategori',$id_kategori);
+	  return $this->db->delete('kategori');
+ 	}
+
+ 	public function tambah_datakategori($data,$table){
+	  $this->db->insert($table,$data);
+ 	}
+
 
 }

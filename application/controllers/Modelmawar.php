@@ -26,6 +26,14 @@ class Modelmawar extends CI_Controller {
 		$this->load->view('modelmawar/footer');
 	}
 
+	public function testmodel()
+	{
+		$data = $this->dataanggota_model->data_mawar();
+		echo "<pre>";
+		echo print_r($data);
+		echo "</pre>";
+	}
+
 }
 
 /* End of file Modelmawar.php */

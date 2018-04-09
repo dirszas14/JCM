@@ -16,7 +16,7 @@
 <script src="<?php echo base_url('assets/plugins/datatables/js/datatables.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables.net/js/jquery.dataTables.js') ?>"></script>
 <script src="<?php echo base_url('assets/plugins/datatables/js/dataTables.bootstrap.min.js') ?>"></script>
-<script src="<?php echo base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')?>"></script>
+<script src="<?php echo base_url('assets/plugins/ckeditor/ckeditor.js')?>"></script>
 <script src="<?php echo base_url('assets/plugins/jQuery-slimScroll/jquery.slimscroll.min.js')?>"></script>
 <script src="../../assets/dist/js/moment.js"></script>
 
@@ -38,8 +38,8 @@
   </script>
   <script>
   $(function () {
-    //Add text editor
-    $("#isiartikel").wysihtml5();
+     CKEDITOR.replace('isiartikel');
+    // $("#isiartikel").wysihtml5();
   });
    $('input[name=tgl_lahir]').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' });
 </script>

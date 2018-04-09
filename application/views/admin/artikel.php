@@ -11,7 +11,7 @@
           <div class="box box-solid box-default">
             <!-- box header -->
             <div class="box-header with-border">
-              <h3 class="box-title">Form Artikel</h3>
+              <h3 class="box-title">Post Artikel</h3>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                 title="Collapse">
@@ -28,15 +28,22 @@
     </div>
   </div>
   <div class="form-group">
-    <label class="col-sm-2 control-label">Tags</label>
+    <label class="col-sm-2 control-label">Kategori</label>
     <div class="col-sm-2">
-      <input type="text" name="tags" class="form-control" required="true")">
+    <select name="kategori" class="form-control custom-select">
+      <option value="">Pilih Kategori</option>
+      <?php
+        foreach ($kategori as $k){
+      echo "<option value=" .$k->id_kategori . ">" . $k->kategori . "</option>";
+    }
+    echo "</select>";
+    ?>
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Isi Artikel</label>
     <div class="col-sm-10">
-      <textarea name="isiartikel" id="isiartikel" class="form-control" style="height:300px"></textarea>
+      <textarea name="isiartikel" id="isiartikel" class="form-control" rows="10" cols="80""></textarea>
     </div>
   </div>
   <div class="form-group">
@@ -68,7 +75,7 @@
               <tr>
                 <th>NO</th>
                 <th>JUDUL ARTIKEL</th>
-                <th>TAGS</th>
+                <th>KATEGORI</th>
                 <th>TANGGAL POST</th>
                 <th></th>
                 <th></th>
@@ -82,9 +89,9 @@
               <tr>
                 <td align="center"><?php echo $no++ ?></td>
                 <td align="center"><?=$a->judul_artikel?> </td>
-                <td align="center"><?=$a->tags?></td>
+                <td align="center"><?=$a->kategori?></td>
                 <td align="center"><?=$a->tanggal?></td>
-                <td align="center"><a method="POST" href="#" class="btn btn-warning">Ubah</a>
+                <td align="center"><a href="<?=site_url("Crud_artikel/editview/$a->id_artikel")?>" class="btn btn-warning">Ubah</a>
                 <td align="center"><a href="<?=site_url("Crud_artikel/hapus_artikel/$a->id_artikel")?>" class="btn btn-danger">Hapus</a>
                 </td>
             </tr>

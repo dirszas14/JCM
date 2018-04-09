@@ -47,8 +47,13 @@ class datauser_model extends CI_Model{
 		$idsession = $this->session->userdata('id_user');
 		$this->db->select('*');
 		$this->db->from('user');
-			$this->db->where('id_user',$idsession);
+		$this->db->where('id_user',$idsession);
 		$query = $this->db->get();
 		return $query->row_array();
+	}
+
+	public function reset_pw($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
 	}
 }

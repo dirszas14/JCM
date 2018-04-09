@@ -14,16 +14,16 @@ class Crud_artikel extends CI_Controller{
 
 	function tambahartikel_proses(){
 
-    $id_user = $this->session->userdata('id_user');
+    	$id_user = $this->session->userdata('id_user');
 		$judul = $this->input->post('judul');
-		$tags = $this->input->post('tags');
+		$id_kategori = $this->input->post('kategori');
 		$isiartikel_pre = $this->input->post('isiartikel');
-    $isiartikel = $isiartikel_pre;
+    	$isiartikel = $isiartikel_pre;
 		$date= date("Y-m-d");
 
 		$data = array(
-      'id_user' => $id_user,
-      'tags' => $tags,
+     	 'id_user' => $id_user,
+      	 'id_kategori' => $id_kategori,
 			'judul_artikel' => $judul,
 			'isi_artikel' => $isiartikel,
 			'tanggal' => $date
@@ -37,5 +37,32 @@ class Crud_artikel extends CI_Controller{
 		  $this->dataartikel_model->hapus_dataartikel($id_artikel);
 		  redirect('Admin/artikel');
  	}
+
+ 	public function hapus_kategori($id_kategori){
+		  $this->dataartikel_model->hapus_datakategori($id_kategori);
+		  redirect('Admin/kategoriartikel');
+ 	}
+
+ 	public function tambah_kategori(){
+		  $kategori = $this->input->post('kategori');
+
+			$data = array(
+	     	'kategori' => $kategori
+				);
+			$this->dataartikel_model->tambah_datakategori($data,'kategori');
+			$this->session->set_flashdata('info', 'true');
+			redirect('Admin/kategoriartikel');
+ 	}
+
+ 	public function editview($id_artikel)
+	{
+		$data['artikel'] = $this->dataartikel_model->editartikel($id_artikel);
+		$data['namauser'] = $this->datauser_model->nama_user();
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
+		$this->load->view('admin/editartikel',$data);
+		$this->load->view('admin/footer');
+	}
 
 }

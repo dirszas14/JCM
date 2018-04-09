@@ -27,7 +27,7 @@
                       <th>NO</th>
                       <th>NAMA</th>
                       <th>USIA</th>
-                      <th>TEMPAT, TANGGAL LAHIR</th>
+                      <th>TEMPAT / TANGGAL LAHIR</th>
                       <th>E-MAIL</th>
                       <th>NO. HP</th>
                       <th>DOMISILI</th>
@@ -47,7 +47,7 @@
                       <td align="Center"><?=$no++ ?></td>
                       <td><?=$x->nama?></td>
                       <td><?=$x->usia.' Tahun' ?></td>
-                      <td><?=$x->tempat_lahir.', '.$x->tgl_lahir  ?></td>
+                      <td><?=$x->tempat_lahir.' / '.date_indo($x->tgl_lahir)  ?></td>
                       <td><?=$x->email?></td>
                       <td><?=$x->no_telp?></td>
                       <td><?=$x->kota_domisili?></td>

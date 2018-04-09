@@ -46,22 +46,20 @@
                   <th>NO.HP</th>
                   <th></th>
                   <th></th>
-                  <th></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody align="center">
                <?php
                 $no = 1;
                 foreach($user as $u){
                 ?>
                 <tr>
-                  <td align="center"><?php echo $no++ ?></td>
+                  <td><?php echo $no++ ?></td>
                   <td><?=$u->id_user?> </td>
                   <td><?=$u->nama?></td>
                   <td><?=$u->level?></td>
                   <td><?=$u->no_telp?></td>
-                  <td><a method="POST" href="#" class="btn btn-info">Detail</a>
-                  <td><a href="<?=site_url("Email/send")?>" class="btn btn-warning">Reset Password</a>
+                  <td><a href="<?=site_url("Crud_user/detail_user/$u->id_user")?>" class="btn btn-info">Detail</a>
                   <td><a href="<?=site_url("Crud_user/hapus_user/$u->id_user")?>" class="btn btn-danger">Hapus</a>
                   </td>
               </tr>

@@ -19,7 +19,7 @@
   <div class="box box-solid box-default">
     <!-- box header -->
     <div class="box-header with-border">
-      <h3 class="box-title">Detail Profile <?=$detail['nama']?></h3>
+      <h3 class="box-title">Detail Kandidat Anggota</h3>
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
         title="Collapse">
@@ -28,11 +28,25 @@
       </div>
     </div>
     <!-- box body -->
-    <div class="box-body"><form class="form-horizontal" action="<?php echo site_url('crud_anggota/tambahanggota_proses')?>" method='post' enctype="multipart/form-data">
+    <div class="box-body"><form class="form-horizontal" action="<?=site_url()?>crud_anggota/approve_proses/<?=$detail['id'];?>" method='post' enctype="multipart/form-data">
+      <div class="form-group">
+    <label class="col-xs-12 text-center" style="font-size:38px;"><?=$detail['nama']?></label>
+  </div><br>
+    <div class="form-group">
+    <div class="col-xs-12 text-center">
+      <img src="<?=base_url()?>assets/img/<?=$detail['foto_fullbody'];?>" class="img-rounded" alt="Full Body">
+    </div>
+  </div><br>
+  <div class="form-group">
+    <div class="col-xs-12 text-center">
+      <img src="<?=base_url()?>assets/img/<?=$detail['foto_closeup'];?>" class="img-rounded" alt="Close Up">
+    </div>
+  </div><br>
   <div class="form-group">
     <label class="col-sm-2 control-label">Nama Lengkap</label>
     <div class="col-sm-8">
       <input type="text" name="nama" class="form-control" required="true" disabled value="<?=$detail['nama'];?>" >
+      <input type="hidden" name="nama" class="form-control" required="true" disabled value="<?=$detail['id'];?>" >
     </div>
   </div>
   <div class="form-group">
@@ -90,8 +104,8 @@
    <div class="form-group">
       <label class="col-sm-2 control-label">Grade</label>
     <div class="col-sm-4">
-      <select name="grade" class="form-control custom-select" id="" required="true">
-        <option selected>Pilih Grade</option>
+      <select name="grade" class="form-control custom-select" id="" required>
+        <option value="">Pilih Grade</option>
         <option value="Mawar">Mawar</option>
         <option value="Melati">Melati</option>
       </select>
@@ -99,8 +113,12 @@
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Insentif</label>
+    <div class="col-sm-8">
+      <input type="text" name="insentif_tampil" class="form-control" disabled value="<?php $format_angka = number_format($detail['insentif'], "2", ",", ".");
+                            echo "Rp. ".$format_angka; ?>">
+    </div>
     <div class="col-sm-10">
-      <input type="text" name="insentif" class="form-control" disabled value="<?=$detail['insentif'];?>">
+      <input type="hidden" name="insentif" class="form-control" disabled value="<?=$detail['insentif'];?>">
     </div>
   </div>
   <!--   <div class="form-group">

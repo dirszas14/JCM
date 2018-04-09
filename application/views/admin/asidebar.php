@@ -52,6 +52,11 @@
         <i class="fa fa-newspaper-o"></i><span> Artikel</span>
       </a>
     </li>
+     <li class="<?php if($this->uri->segment(2)=="kategoriartikel"){echo 'active';} ?>">
+      <a href="<?php echo site_url('admin/kategoriartikel')?>">
+        <i class="fa fa-tags"></i><span> Kategori Artikel</span>
+      </a>
+    </li>
     <li class="<?php if($this->uri->segment(2)=="laporan"){echo 'active';} ?>">
       <a href="<?php echo site_url('admin/laporan')?>">
         <i class="fa fa-book"></i><span> Laporan</span>

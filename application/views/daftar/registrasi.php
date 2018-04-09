@@ -20,13 +20,13 @@
   <div class="form-group">
     <label class="col-sm-2 control-label">Email Aktif</label>
     <div class="col-sm-6">
-      <input type="text" name="email" class="form-control" required="true">
+      <input type="text" name="email" class="form-control" >
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Usia</label>
     <div class="col-sm-2 input-group">
-      <input type="text" name="usia" class="form-control" required="true" onkeypress="return isNumberKey(event)">
+      <input type="text" name="usia" class="form-control" onkeypress="return isNumberKey(event)">
       <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">Tahun</span>
 </div>
@@ -35,31 +35,31 @@
   <div class="form-group">
     <label class="col-sm-2 control-label">No. HP Aktif</label>
     <div class="col-sm-4">
-      <input type="text" name="no_telp" class="form-control" required="true" maxlength="13" onkeypress="return isNumberKey(event)">
+      <input type="text" name="no_telp" class="form-control" maxlength="13" onkeypress="return isNumberKey(event)">
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Kota Domisili</label>
     <div class="col-sm-4">
-      <input type="text" name="domisili" class="form-control" required="true">
+      <input type="text" name="domisili" class="form-control" >
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Tempat Lahir</label>
     <div class="col-sm-4">
-      <input type="text" name="tmp_lahir" class="form-control" required="true">
+      <input type="text" name="tmp_lahir" class="form-control"> 
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Tanggal Lahir</label>
     <div class="col-sm-4">
-      <input type="text" name="tgl_lahir" class="form-control" required="true">
+      <input type="text" name="tgl_lahir" class="form-control" >
     </div>
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Tinggi Badan</label>
     <div class="col-sm-2 input-group">
-      <input type="text" name="tinggibadan" class="form-control" required="true" maxlength="3" onkeypress="return isNumberKey(event)">
+      <input type="text" name="tinggibadan" class="form-control" maxlength="3" onkeypress="return isNumberKey(event)">
        <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">CM</span>
   </div>
@@ -68,7 +68,7 @@
     <div class="form-group">
     <label class="col-sm-2 control-label">Berat Badan</label>
     <div class="col-sm-2 input-group">
-      <input type="text" name="beratbadan" class="form-control" required="true" maxlength="3" onkeypress="return isNumberKey(event)">
+      <input type="text" name="beratbadan" class="form-control" maxlength="3" onkeypress="return isNumberKey(event)">
       <div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">KG</span>
     </div>
@@ -96,15 +96,15 @@
     <div class="col-sm-3 input-group">
     	<div class="input-group-append">
     <span class="input-group-text" id="basic-addon2">Rp.</span></div>
-      <input type="text" name="insentif" class="form-control" required="true" maxlength="9" onkeypress="return isNumberKey(event)">
+      <input type="text" name="insentif" class="form-control" maxlength="9" onkeypress="return isNumberKey(event)">
     </div>
   </div>
    <div class="form-group">
    	<label class="col-sm-4 control-label">Foto Close Up</label>
    	<div class="col-sm-3">
 	<label class="custom-file">
-		 <input type="file" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp">
-        <label class="custom-file-label" for="exampleInputFile">
+		 <input type="file" class="custom-file-input" id="close_up" name="close_up" aria-describedby="fileHelp">
+        <label class="custom-file-label" for="close_up">
            Pilih File...
         </label>
 	</label>
@@ -114,8 +114,8 @@
    	<label class="col-sm-4 control-label">Foto Full Body</label>
    	<div class="col-sm-3">
 	<label class="custom-file">
-		 <input type="file" class="custom-file-input" id="exampleInputFile" aria-describedby="fileHelp">
-        <label class="custom-file-label" for="exampleInputFile">
+		 <input type="file" class="custom-file-input" id="full_body" name="full_body" aria-describedby="fileHelp">
+        <label class="custom-file-label" for="full_body">
            Pilih file...
         </label>
 	</label>
@@ -134,3 +134,4 @@
   </div>
 </form>
 </div>
+

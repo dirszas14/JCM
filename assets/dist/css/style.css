@@ -10,8 +10,8 @@ ul>li>a.navbar-list{
 	font-size: 20px;
 	padding: 0 20px !important;
 	font-family:'Ubuntu', sans-serif;
-
 }
+
 ul>li>a.navbar-list:hover {
 	border-bottom: 2px solid #F95F0C ; 
 transition-property: left, right;
@@ -52,7 +52,7 @@ th {
 	font-family: 'Kaushan Script';
 }
 .canvas-head{
-background: url('../../img/model1.png')  no-repeat  fixed;
+background: url('../../img/Contact-Us.png')  no-repeat  fixed;
 background-size:cover;
 background-position: center center;
 }

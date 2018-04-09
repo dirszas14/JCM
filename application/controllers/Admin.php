@@ -30,7 +30,7 @@ class Admin extends CI_Controller {
 public function anggota()
 	{
 		$data['anggota'] = $this->dataanggota_model->tampilanggota();
-      $data['namauser'] = $this->datauser_model->nama_user();
+      	$data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
 		$this->load->view('admin/headermain',$data);
 		$this->load->view('admin/asidebar',$data);
@@ -72,12 +72,25 @@ public function ubahpassword()
 
 public function artikel()
 	{
-    $data['artikel'] = $this->dataartikel_model->tampilartikel();
-      $data['namauser'] = $this->datauser_model->nama_user();
+    	$data['artikel'] = $this->dataartikel_model->tampilartikel();
+      	$data['namauser'] = $this->datauser_model->nama_user();
+      	$data['kategori'] = $this->dataartikel_model->tampilkategori();
 		$this->load->view('admin/header');
 		$this->load->view('admin/headermain',$data);
 		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/artikel',$data);
+		$this->load->view('admin/footer');
+	}
+
+public function kategoriartikel()
+	{
+		$data['artikel'] = $this->dataartikel_model->tampilartikel();
+      	$data['namauser'] = $this->datauser_model->nama_user();
+      	$data['kategori'] = $this->dataartikel_model->tampilkategori();
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
+		$this->load->view('admin/kategoriartikel',$data);
 		$this->load->view('admin/footer');
 	}
 

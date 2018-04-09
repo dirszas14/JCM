@@ -1,16 +1,13 @@
 <?php
 class Crud_anggota extends CI_Controller{
-
 	function __construct(){
 		parent::__construct();
 		$this->load->model('dataanggota_model');
 		$this->load->helper('url');
+		$this->load->helper('tgl_indo');
 	}
-
 	function index(){
-
 	}
-
 	function tambahanggota_proses(){
 		$nama = $this->input->post('nama');
 		$usia = $this->input->post('usia');
@@ -23,22 +20,18 @@ class Crud_anggota extends CI_Controller{
 		$status = $this->input->post('status');
 		$pengalaman = $this->input->post('pengalaman');
 		$grade = $this->input->post('grade');
-
 		$unik="";
 		if ($grade=="Mawar"){
 			$unik = $this->dataanggota_model->id_anggota_mawar();
-
 		}
 		else if($grade=="Melati"){
 			$unik = $this->dataanggota_model->id_anggota_melati();
 		}
-
 		$prefix = $unik;
 		$prefixgrade = substr($grade,0,3);
 		$insentif = $this->input->post('insentif');
 		$id_anggota = $prefixgrade.'-'.$prefix;
 		$tgl_gabung= date("Y-m-d");
-
 		$data = array(
 			'id_anggota' => $id_anggota,
 			'nama' => $nama,
@@ -61,28 +54,45 @@ class Crud_anggota extends CI_Controller{
 		redirect('Admin/anggota');
 	}
 
-	public function approve_anggota($id){
+	public function approve_proses($id){
+	$grade = $this->input->post('grade');
+	$unik="";
+		if ($grade=="Mawar"){
+			$unik = $this->dataanggota_model->id_anggota_mawar();
+		}
+		else if($grade=="Melati"){
+			$unik = $this->dataanggota_model->id_anggota_melati();
+		}
+		$prefix = $unik;
+		$prefixgrade = substr($grade,0,3);
+		$id_anggota = $prefixgrade.'-'.$prefix;
+	$tgl_gabung= date("Y-m-d");
 	$data = array(
+		'id_anggota' => $id_anggota,
+		'grade' => $grade,
+		'tanggal_gabung' => $tgl_gabung, 
 		'approval' => TRUE
 	);
+
 	$where = array(
 		'id' => $id
 	);
-	$this->dataanggota_model->approveanggota($where,$data,'anggota');
+
+	$query=$this->dataanggota_model->approveanggota($where,$data,'anggota');
 	redirect('Admin/approve');
 }
 
 	public function hapus_anggota($id){
-		  $this->dataanggota_model->hapus_dataanggota($id);
-		  redirect('Admin/anggota');
- 	}
+		$this->dataanggota_model->hapus_dataanggota($id);
+		redirect('Admin/anggota');
+	}
 
 	public function tolak_anggota($id){
 			$this->dataanggota_model->hapus_dataanggota($id);
 			redirect('Admin/approve');
 	}
 
-	function regisanggota_proses(){
+	public function regisanggota_proses(){
 		$nama = $this->input->post('nama');
 		$email = $this->input->post('email');
 		$usia = $this->input->post('usia');
@@ -95,9 +105,26 @@ class Crud_anggota extends CI_Controller{
 		$status = $this->input->post('status');
 		$pengalaman = $this->input->post('pengalaman');
 		$insentif = $this->input->post('insentif');
-		$tgl_gabung= date("Y-m-d");
+		$config = [
+				'upload_path' => './assets/img/',
+				'allowed_types' => 'gif|jpg|png',
+				'max_size' => 1000,
+				'max_width' => 1000,
+				'max_height' => 1000
+			];
+			$this->load->library('upload', $config);
+			$this->upload->overwrite = true;
+			if (!$this->upload->do_upload('close_up') OR !$this->upload->do_upload('full_body') ) //jika gagal upload
+			{
+					$error = array('error' => $this->upload->display_errors()); //tampilkan error
+					$this->load->view('Admin/errorupload', $error);
+			} else
+			//jika berhasil upload
+			{
+				$closeup = $this->upload->data();
+				$full_body = $this->upload->data();
 
-		$data = array(
+		    $data = array(
 			'email' => $email,
 			'nama' => $nama,
 			'usia' => $usia,
@@ -110,15 +137,16 @@ class Crud_anggota extends CI_Controller{
 			'status' => $status,
 			'pengalaman' => $pengalaman,
 			'insentif' => $insentif,
-			'tanggal_gabung' => $tgl_gabung,
+			'foto_fullbody' => $full_body['file_name'],
+			'foto_closeup' => $closeup['file_name'],
 			'approval' => FALSE
 			);
 		$this->dataanggota_model->regis_data($data,'anggota');
 		redirect('Daftarmember');
 	}
+}
 
 	public function approve_detail($id){
-			// $query = $this->datauser_model->profileuser($id_user);
 			$data['detail'] = $this->dataanggota_model->approvedetail($id);
 			$data['namauser'] = $this->datauser_model->nama_user();
 			$this->load->view('admin/header');
@@ -127,4 +155,24 @@ class Crud_anggota extends CI_Controller{
 			$this->load->view('admin/approve_detail',$data);
 			$this->load->view('admin/footer');
 		}
+
+	public function detail_anggota($id){
+			$data['detail'] = $this->dataanggota_model->detailanggota($id);
+			$data['namauser'] = $this->datauser_model->nama_user();
+			$this->load->view('admin/header');
+			$this->load->view('admin/headermain',$data);
+			$this->load->view('admin/asidebar',$data);
+			$this->load->view('admin/detailanggota',$data);
+			$this->load->view('admin/footer');
+	}
+
+	public function edit_anggota($id){
+			$data['detail'] = $this->dataanggota_model->detailanggota($id);
+			$data['namauser'] = $this->datauser_model->nama_user();
+			$this->load->view('admin/header');
+			$this->load->view('admin/headermain',$data);
+			$this->load->view('admin/asidebar',$data);
+			$this->load->view('admin/ubahanggota',$data);
+			$this->load->view('admin/footer');
+	}
 }

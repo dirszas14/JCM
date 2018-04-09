@@ -79,15 +79,15 @@
           <h1 style="color:white;">Mawar</h1><br>
           <div class="row">
             <div class="col-md-6">
-               <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
                <div class="overlay-modela">
-                 <div class="text-modela">Chelsea Islan</div>
+                 <div class="text-modela">Model Mawar</div>
                </div>
             </div>
             <div class="col-md-6">
-               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
                <div class="overlay-modela">
-                 <div class="text-modela">Chelsea Islan</div>
+                 <div class="text-modela">Model Mawar</div>
                </div>
             </div>
           </div><br>
@@ -100,15 +100,15 @@
           <h1 style="color:white;">Melati</h1><br>
           <div class="row">
             <div class="col-md-6">
-                <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+                <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
                <div class="overlay-modelb">
-                 <div class="text-modelb">Chelsea Islan</div>
+                 <div class="text-modelb">Model Melati</div>
                </div>
             </div>
             <div class="col-md-6">
-               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/model1.jpeg') ?>" alt="Card image cap">
+               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
                <div class="overlay-modelb">
-                 <div class="text-modelb">Chelsea Islan</div>
+                 <div class="text-modelb">Model Melati</div>
                </div>
             </div>
           </div>
@@ -124,7 +124,7 @@
   <div class="container">
     <div class="row pb-2">
       <div class="col-12 col-md-4">
-        <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+        <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
             <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true"></i> admin</p>
@@ -134,14 +134,14 @@
           </div>
         </div>
         <h3>Judul Artikel </h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
+           <p class="text-truncate" style="max-height: 300px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
            <div class="row">
              <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
            </div>
 
         </div>
       <div class="col-12 col-md-4">
-        <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+        <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
             <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true">&nbsp;</i> admin</p>
@@ -157,7 +157,7 @@
            </div>
         </div>
       <div class="col-12 col-md-4">
-        <img class="img-fluid" src="<?php echo base_url('assets/img/photo3.jpg'); ?>" alt="">
+        <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
             <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true"></i> admin</p>

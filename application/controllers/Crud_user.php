@@ -64,8 +64,8 @@ public function hapus_user($id_user){
   		  $data['nama'] = $query['nama'];
   		  $data['level'] = $query['level'];
   		  $data['no_telp'] = $query['no_telp'];
-				$data['foto'] = $query['foto'];
-				$data['namauser'] = $this->datauser_model->nama_user();
+		  $data['foto'] = $query['foto'];
+		  $data['namauser'] = $this->datauser_model->nama_user();
   		  $this->load->view('admin/header');
 		  $this->load->view('admin/headermain',$data);
 		  $this->load->view('admin/asidebar',$data);
@@ -73,9 +73,33 @@ public function hapus_user($id_user){
 		  $this->load->view('admin/footer');
    	}
 
-public function reset_pw($id_user){
-  		 $this->datauser_model->hapus_datauser($id_user);
-  		 redirect('Admin/anggota');
+public function detail_user($id_user){
+  		  $query = $this->datauser_model->profileuser($id_user);
+  		  $data['id_user'] = $query['id_user'];
+  		  $data['nama'] = $query['nama'];
+  		  $data['level'] = $query['level'];
+  		  $data['no_telp'] = $query['no_telp'];
+		  $data['foto'] = $query['foto'];
+		  $data['namauser'] = $this->datauser_model->nama_user();
+  		  $this->load->view('admin/header');
+		  $this->load->view('admin/headermain',$data);
+		  $this->load->view('admin/asidebar',$data);
+		  $this->load->view('admin/detailuser',$data);
+		  $this->load->view('admin/footer');
+   	}
+
+public function reset_pw(){
+	$no_telp = $this->input->post('no_telp');
+	$id_user = $this->input->post('id_user');
+	$data = array(
+		'password' => md5($no_telp)
+	);
+
+	$where = array(
+		'id_user' => $id_user
+	);
+  		 $this->datauser_model->reset_pw($where,$data,'user');
+  		 redirect('Admin/user');
    }
 
 public function update_profile(){
