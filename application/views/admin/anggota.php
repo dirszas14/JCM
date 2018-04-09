@@ -41,7 +41,7 @@
                       <th>ID ANGGOTA</th>
                       <th>NAMA</th>
                       <th>USIA</th>
-                      <th>TEMPAT, TANGGAL LAHIR</th>
+                      <th>TEMPAT / TANGGAL LAHIR</th>
                       <th>NO. HP</th>
                       <th>DOMISILI</th>
                       <th>CM/KG</th>
@@ -53,17 +53,17 @@
                       <th></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody align="center">
                    <?php
                      $no = 1;
                       foreach($anggota as $x){
                       ?>
                     <tr>
-                      <td align="Center"><?=$no++ ?></td>
+                      <td><?=$no++ ?></td>
                       <td><?=$x->id_anggota?></td>
                       <td><?=$x->nama?></td>
                       <td><?=$x->usia.' Tahun' ?></td>
-                      <td><?=$x->tempat_lahir.', '.$x->tgl_lahir  ?></td>
+                      <td><?=$x->tempat_lahir.' / '?><?=date_indo($x->tgl_lahir)?></td>
                       <td><?=$x->no_telp?></td>
                       <td><?=$x->kota_domisili?></td>
                       <td><?=$x->tinggi_badan.'/'.$x->berat_badan ?></td>
@@ -71,13 +71,9 @@
                       <td><?=$x->grade?></td>
                       <td><?php $format_angka = number_format($x->insentif, "2", ",", ".");
                             echo "Rp. ".$format_angka; ?></td>
-                      <td><a  href="<?=site_url("Crud_anggota/hapus_anggota/$x->id_anggota")?>" class="btn btn-info">Detail</a>
-                      <input type="hidden" name="nip" value="#">
-                      </td>
-                      <td><a href="<?php echo site_url('crud_anggota/hapus_anggota/',$x->id_anggota)?>" class="btn btn-warning">Ubah</a>
-                      <input type="hidden" name="id_anggota" value="<?php echo $x->id_anggota;?>"></td>
-                      <td><a  href="<?=site_url("Crud_anggota/hapus_anggota/$x->id_anggota")?>" class="btn btn-danger">Hapus</a>
-                      <input type="hidden" name="nip" value="#">
+                      <td><a href="<?=site_url("Crud_anggota/detail_anggota/$x->id")?>" class="btn btn-info">Detail</a></td>
+                      <td><a href="<?=site_url("Crud_anggota/edit_anggota/$x->id")?>" class="btn btn-warning">Ubah</a>
+                      <td><a href="<?=site_url("Crud_anggota/hapus_anggota/$x->id")?>" class="btn btn-danger">Hapus</a>
                     </td>
                   </tr>
                 <?php } ?>

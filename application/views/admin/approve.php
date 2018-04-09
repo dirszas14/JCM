@@ -20,22 +20,20 @@
             </div>
             <!-- box body -->
             <div class="box-body">
-              <div class="box-body table-responsive no-padding">
+              <div class="box-body">
                 <table class="table table-bordered table-striped" id="tabel_anggota" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th>NO</th>
-                      <th>ID ANGGOTA</th>
                       <th>NAMA</th>
                       <th>USIA</th>
-                      <th>TEMPAT, TANGGAL LAHIR</th>
+                      <th>TEMPAT / TANGGAL LAHIR</th>
+                      <th>E-MAIL</th>
                       <th>NO. HP</th>
                       <th>DOMISILI</th>
                       <th>CM/KG</th>
                       <th>STATUS</th>
-                      <th>GRADE</th>
                       <th>INSENTIF</th>
-                      <th></th>
                       <th></th>
                       <th></th>
                     </tr>
@@ -47,21 +45,18 @@
                      ?>
                     <tr>
                       <td align="Center"><?=$no++ ?></td>
-                      <td><?=$x->id_anggota?></td>
                       <td><?=$x->nama?></td>
                       <td><?=$x->usia.' Tahun' ?></td>
-                      <td><?=$x->tempat_lahir.', '.$x->tgl_lahir  ?></td>
+                      <td><?=$x->tempat_lahir.' / '.date_indo($x->tgl_lahir)  ?></td>
+                      <td><?=$x->email?></td>
                       <td><?=$x->no_telp?></td>
                       <td><?=$x->kota_domisili?></td>
                       <td><?=$x->tinggi_badan.'/'.$x->berat_badan ?></td>
                       <td><?=$x->status?></td>
-                      <td><?=$x->grade?></td>
                       <td><?php $format_angka = number_format($x->insentif, "2", ",", ".");
                             echo "Rp. ".$format_angka; ?></td>
-                      <td><a href="<?php echo site_url('crud_anggota/hapus_anggota/',$x->id_anggota)?>" class="btn btn-info">Approve</a>
-                      <input type="hidden" name="id_anggota" value="<?php echo $x->id_anggota;?>"></td>
-                      <td><a  href="<?=site_url("Crud_anggota/hapus_anggota/$x->id_anggota")?>" class="btn btn-danger">Tolak</a>
-                      <input type="hidden" name="nip" value="#">
+                      <td><a href="<?=site_url("Crud_anggota/approve_detail/$x->id")?>" class="btn btn-success">Approve</a>
+                      <td><a href="<?=site_url("Crud_anggota/tolak_anggota/$x->id")?>" class="btn btn-danger">Tolak</a>
                     </td>
                     </tr>
                   <?php } ?>

@@ -12,7 +12,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/" class="icoInstagram"><i class="fa fa-instagram"></i>
+							<a href="https://www.instagram.com/jc_management/" target = '_blank' class="icoInstagram"><i class="fa fa-instagram"></i>
 							</a>
 						</li>
 						<li>
@@ -47,7 +47,7 @@
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/dist/b4/js/bootstrap.min.js')?>" ></script>
 <script>
-	
+
   $(window).scroll(function(){
     if($(document).scrollTop() > 50){
       $('nav').addClass('shrink');

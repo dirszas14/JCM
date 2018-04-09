@@ -12,7 +12,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/" class="icoInstagram"><i class="fa fa-instagram"></i>
+							<a href="https://www.instagram.com/jc_management/" target = '_blank' class="icoInstagram"><i class="fa fa-instagram"></i>
 							</a>
 						</li>
 						<li>
@@ -49,7 +49,7 @@
 
 <script src="<?php echo base_url('assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js')?>"></script>
 <script>
-	
+
   $(window).scroll(function(){
     if($(document).scrollTop() > 50){
       $('nav').addClass('shrink');
@@ -69,5 +69,5 @@ return false;
 return true;
 }
 
-</script> 
+</script>
 </html>

@@ -5,9 +5,10 @@ class Modelmelati extends CI_Controller {
 
 	public function index()
 	{
+		$data['melati']=$this->dataanggota_model->data_melati();
 		$this->load->view('modelmelati/header');
 		$this->load->view('modelmawar/sidebar');
-		$this->load->view('modelmelati/modelmelati');
+		$this->load->view('modelmelati/modelmelati',$data);
 		$this->load->view('modelmelati/footer');
 	}
 

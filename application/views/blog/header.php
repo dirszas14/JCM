@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jakarta Center Management - Grade Mawar</title>
+  <title>Jakarta Center Management - Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="<?php echo base_url('assets/dist/b4/css/bootstrap.min.css') ?>">

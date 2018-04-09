@@ -7,30 +7,16 @@
 	        <small>Informasi</small>
 	      </h1>
 	    </section>
-	    
+
 
 	      <section class="content">
-     <!--  <div class="row">
-      <div class="col-sm-4">
-          <div class="small-box bg-blue">
-            <div class="inner">
-              <h2><?= date('F Y'); ?></h2>
-              <br>
-              <p>Calendar</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-calendar"></i>
-            </div>
-            <a href="dashboard.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-          </div>
-        </div> -->
+
         <div class="row">
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-blue">
             <div class="inner">
               <h3><?=$totaluser?></h3>
-
               <p>Total User</p>
             </div>
             <div class="icon">
@@ -87,7 +73,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="row">
       <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -100,11 +86,11 @@
             <div class="icon">
               <i class="fa fa-check"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url('admin/approve') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
       </div>
-      
+
        <div class="row">
       <div class="col-md-6">
               <!-- USERS LIST -->
@@ -123,14 +109,22 @@
                 <!-- /.box-header -->
                 <div class="box-body no-padding">
                   <ul class="users-list clearfix">
-                    <?php 
+                    <?php
                      $no = 1;
-                      foreach($anggotaterbaru as $x){ 
+                      foreach($anggotaterbaru as $x){
                       ?>
+                     
                     <li>
-                      <img src="<?php echo base_url('assets/dist/img/user.png')?>" alt="User Image">
+                      <img src="<?=base_url()?>assets/img/<?=$x->foto_closeup;?>" alt="User Image">
                       <a class="users-list-name" href="#"><?=$x->nama?></a>
-                      <span class="users-list-date">Today</span>
+                      <span class="users-list-date"><?=$x->grade?></span>
+                      <span class="users-list-date"><?php $date=date("Y-m-d"); 
+                      if($x->tanggal_gabung == $date){
+                        echo "Hari ini";
+                      } else {
+                        $fix=date_indo($x->tanggal_gabung);
+                        echo $fix ;
+                      }?></span>
                     </li>
                     <?php } ?>
                   </ul>
@@ -141,23 +135,22 @@
                 </div>
 
 </div>
-         
+
 			</div>
     </div>
 
-     
+
 	    </section>
 	    <!-- /.content -->
 	  </div>
 
 	  <!-- =============================================== -->
-	 
+
 	  <div class="control-sidebar-bg"></div>
 	</div>
 
 
 
 	<script type="text/javascript">
-		
-	</script>
 
+	</script>

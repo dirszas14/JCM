@@ -19,9 +19,10 @@ class Admin extends CI_Controller {
 		$data['totalapproval']= $this->dataanggota_model->totalapproval();
 		$data['anggotaterbaru']= $this->dataanggota_model->anggotaterbaru();
 		$data['totalanggotaterbaru']= $this->dataanggota_model->totalanggotaterbaru();
+    $data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
-		$this->load->view('admin/headermain');
-		$this->load->view('admin/asidebar');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/dashboard',$data);
 		$this->load->view('admin/footer');
 	}
@@ -29,9 +30,10 @@ class Admin extends CI_Controller {
 public function anggota()
 	{
 		$data['anggota'] = $this->dataanggota_model->tampilanggota();
+      	$data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
-		$this->load->view('admin/headermain');
-		$this->load->view('admin/asidebar');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/anggota',$data);
 		$this->load->view('admin/footer');
 	}
@@ -39,9 +41,10 @@ public function anggota()
 public function approve()
 	{
     $data['approve'] = $this->dataanggota_model->approve();
+      $data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
-		$this->load->view('admin/headermain');
-		$this->load->view('admin/asidebar');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/approve',$data);
 		$this->load->view('admin/footer');
 	}
@@ -49,29 +52,45 @@ public function approve()
 public function user()
 	{
 		$data['user'] = $this->datauser_model->tampiluser();
+      $data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
-		$this->load->view('admin/headermain');
-		$this->load->view('admin/asidebar');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/user',$data);
 		$this->load->view('admin/footer');
 	}
 
 public function ubahpassword()
 	{
+      $data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
-		$this->load->view('admin/headermain');
-		$this->load->view('admin/asidebar');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/ubahpassword');
 		$this->load->view('admin/footer');
 	}
 
 public function artikel()
 	{
-    $data['artikel'] = $this->dataartikel_model->tampilartikel();
+    	$data['artikel'] = $this->dataartikel_model->tampilartikel();
+      	$data['namauser'] = $this->datauser_model->nama_user();
+      	$data['kategori'] = $this->dataartikel_model->tampilkategori();
 		$this->load->view('admin/header');
-		$this->load->view('admin/headermain');
-		$this->load->view('admin/asidebar');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/artikel',$data);
+		$this->load->view('admin/footer');
+	}
+
+public function kategoriartikel()
+	{
+		$data['artikel'] = $this->dataartikel_model->tampilartikel();
+      	$data['namauser'] = $this->datauser_model->nama_user();
+      	$data['kategori'] = $this->dataartikel_model->tampilkategori();
+		$this->load->view('admin/header');
+		$this->load->view('admin/headermain',$data);
+		$this->load->view('admin/asidebar',$data);
+		$this->load->view('admin/kategoriartikel',$data);
 		$this->load->view('admin/footer');
 	}
 
@@ -84,5 +103,5 @@ public function artikel()
 
 
 
-/* End of file Home.php */
-/* Location: ./application/controllers/Home.php */
+/* End of file Admin.php */
+/* Location: ./application/controllers/Admin.php */

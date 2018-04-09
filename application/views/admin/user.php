@@ -46,26 +46,21 @@
                   <th>NO.HP</th>
                   <th></th>
                   <th></th>
-                  <th></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody align="center">
                <?php
                 $no = 1;
                 foreach($user as $u){
                 ?>
                 <tr>
-                  <td align="center"><?php echo $no++ ?></td>
+                  <td><?php echo $no++ ?></td>
                   <td><?=$u->id_user?> </td>
                   <td><?=$u->nama?></td>
                   <td><?=$u->level?></td>
                   <td><?=$u->no_telp?></td>
-                  <td><a method="POST" href="#" class="btn btn-info">Detail</a>
-                  <input type="hidden" name="nip" value="#"></td>
-                  <td><a method="POST" href="#" class="btn btn-warning">Ubah</a>
-                  <input type="hidden" name="nip" value="#"></td>
+                  <td><a href="<?=site_url("Crud_user/detail_user/$u->id_user")?>" class="btn btn-info">Detail</a>
                   <td><a href="<?=site_url("Crud_user/hapus_user/$u->id_user")?>" class="btn btn-danger">Hapus</a>
-                  <input type="hidden" name="nip" value="#">
                   </td>
               </tr>
               <?php } ?>
