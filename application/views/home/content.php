@@ -79,16 +79,10 @@
           <h1 style="color:white;">Mawar</h1><br>
           <div class="row">
             <div class="col-md-6">
-               <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
-               <div class="overlay-modela">
-                 <div class="text-modela">Model Mawar</div>
-               </div>
+               <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
             </div>
             <div class="col-md-6">
-               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
-               <div class="overlay-modela">
-                 <div class="text-modela">Model Mawar</div>
-               </div>
+              <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
             </div>
           </div><br>
           <a href="<?php echo site_url('modelmawar/') ?>" class="btn btn-info">Lihat Semua</a>
@@ -100,16 +94,10 @@
           <h1 style="color:black;">Melati</h1><br>
           <div class="row">
             <div class="col-md-6">
-                <img class="img-fluid model-photo mb-2" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
-               <div class="overlay-modelb">
-                 <div class="text-modelb">Model Melati</div>
-               </div>
+                <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
             </div>
             <div class="col-md-6">
-               <img class="img-fluid model-photo" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
-               <div class="overlay-modelb">
-                 <div class="text-modelb">Model Melati</div>
-               </div>
+              <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
             </div>
           </div>
           <br>
