@@ -10,7 +10,7 @@
 		?>  
 				<div class="col-12 col-md-<?=$lebarbs;?>">
 					<div class="card mb-3">
-						<img class="card-img-top" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
+						<img class="card-img-top" data-alt-src="<?php echo base_url('assets/img/avatar3.png') ?>" src="<?php echo base_url('assets/img/avatar2.png') ?>" alt="Card image cap">
 						<div class="card-body">
 							<h5 class="card-title text-center"><?=$m['nama']?></h5>
 						</div>

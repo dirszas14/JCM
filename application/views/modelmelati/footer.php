@@ -47,7 +47,18 @@
 <script src="<?php echo base_url('assets/plugins/jquery/dist/jquery.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/dist/b4/js/bootstrap.min.js')?>" ></script>
 <script>
+var sourceSwap = function () {
+        var $this = $(this);
+        var newSource = $this.data('alt-src');
+        $this.data('alt-src', $this.attr('src'));
+        $this.attr('src', newSource);
+    }
 
+    $(function() {
+        $('img[data-alt-src]').each(function() { 
+            new Image().src = $(this).data('alt-src'); 
+        }).hover(sourceSwap, sourceSwap); 
+    });
  /* $(window).scroll(function(){
     if($(document).scrollTop() > 10){
       $('nav').addClass('shrink');
