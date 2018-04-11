@@ -9,11 +9,18 @@
 		foreach($mawar as $m){
 		?>  
 				<div class="col-12 col-md-<?=$lebarbs;?>">
-					<img class="img-fluid model-closeup" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
-					<p>Nama: <?=$m['nama']?></p>
-					<p>Tinggi: <?=$m['tinggi_badan']." "?> cm</p>
-					<p>Berat Badan: <?=$m['berat_badan']." "?> kg</p>
-					<p>Usia: <?=$m['usia']." "?> tahun</p>
+					<div class="card mb-3">
+					<img class="card-img-top model-closeup" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title text-center">
+							<?=$m['nama']?>
+						</h5>
+						<hr style="border-width:2px; color:black;">
+					</div>
+					<p class="card-text">Tinggi: <?=$m['tinggi_badan']." "?> cm</p>
+					<p class="card-text">Berat Badan: <?=$m['berat_badan']." "?> kg</p>
+					<p class="card-text">Usia: <?=$m['usia']." "?> tahun</p>
+				</div>
 				</div>
 				<?php
 				$barismulai++;
