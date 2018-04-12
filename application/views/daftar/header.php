@@ -8,12 +8,12 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js" rel="stylesheet">
+   
 <!--  <script defer src="<?php echo base_url('assets/plugins/font-awesome/svg-with-js/js/fontawesome-all.js') ?>"></script> -->
    <link rel="stylesheet" href="<?php echo base_url('assets/dist/css/style.css') ?>">
    <link rel="stylesheet" href="<?php echo base_url('assets/plugins/font-awesome/css/font-awesome.min.css') ?>">
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="199">
+<body data-spy="scroll" data-target=".navbar" data-offset="199"  style="background-color: #ECF0F1;">
     <nav style="transition: padding .3s;" class="navbar navbar-expand-md fixed-top navbar-dark shrink">
   <a class="navbar-brand" href="<?php echo site_url('') ?>">Jakarta Center Management</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
