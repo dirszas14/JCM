@@ -115,7 +115,7 @@
                       ?>
                      
                     <li>
-                      <img src="<?=base_url()?>assets/img/<?=$x->foto_closeup;?>" alt="User Image">
+                      <img class="recent" src="<?=base_url()?>assets/img/<?=$x->foto_closeup;?>" alt="User Image">
                       <a class="users-list-name" href="#"><?=$x->nama?></a>
                       <span class="users-list-date"><?=$x->grade?></span>
                       <span class="users-list-date"><?php $date=date("Y-m-d"); 

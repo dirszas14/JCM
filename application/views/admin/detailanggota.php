@@ -27,12 +27,12 @@
   </div><br>
     <div class="form-group">
     <div class="col-xs-12 text-center">
-      <img src="<?=base_url()?>assets/img/<?=$detail['foto_fullbody'];?>" class="img-rounded" alt="Full Body">
+      <img class="fotodetail" src="<?=base_url()?>assets/img/<?=$detail['foto_fullbody'];?>" class="img-rounded" alt="Full Body">
     </div>
   </div><br>
   <div class="form-group">
     <div class="col-xs-12 text-center">
-      <img src="<?=base_url()?>assets/img/<?=$detail['foto_closeup'];?>" class="img-rounded" alt="Close Up">
+      <img class="fotodetail" src="<?=base_url()?>assets/img/<?=$detail['foto_closeup'];?>" class="img-rounded" alt="Close Up">
     </div>
   </div><br>
   <div class="form-group">

@@ -34,7 +34,7 @@
     <select name="kategori" class="form-control custom-select">
       <option value="">Pilih Kategori</option>
       <?php
-        foreach ($kategori as $k){
+        foreach ($kategori as $k){ 
       echo "<option value=" .$k->id_kategori . ">" . $k->kategori . "</option>";
     }
     echo "</select>";
