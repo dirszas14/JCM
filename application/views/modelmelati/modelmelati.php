@@ -9,11 +9,16 @@
 		foreach($melati as $m){
 		?>  
 				<div class="col-12 col-md-<?=$lebarbs;?>">
-					<img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png') ?>" alt="Card image cap">
-					<p>Nama: <?=$m['nama']?></p>
-					<p>Tinggi: <?=$m['tinggi_badan']." "?> cm</p>
-					<p>Berat Badan: <?=$m['berat_badan']." "?> kg</p>
-					<p>Usia: <?=$m['usia']." "?> tahun</p>
+					<div class="card mb-3">
+						<img class="card-img-top" data-alt-src="<?php echo base_url('assets/img/avatar1.png') ?>" src="<?php echo base_url('assets/img/avatar2.png') ?>" alt="Card image cap">
+						<div class="card-body">
+							<h5 class="card-title text-center"><?=$m['nama']?></h5>
+						</div>
+						<p class="card-text">Tinggi <?=$m['tinggi_badan']." "?> cm</p>
+					<p class="card-text">Berat Badan: <?=$m['berat_badan']." "?> kg</p>
+					<p class="card-text">Usia: <?=$m['usia']." "?> tahun</p>
+					</div>
+					
 				</div>
 				<?php
 				$barismulai++;

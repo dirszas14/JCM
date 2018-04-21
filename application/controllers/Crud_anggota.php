@@ -121,8 +121,8 @@ class Crud_anggota extends CI_Controller{
 			} else
 			//jika berhasil upload
 			{
-				$closeup = $this->upload->data();
-				$full_body = $this->upload->data();
+			$closeup = $this->upload->data();
+			$full_body = $this->upload->data();
 
 		    $data = array(
 			'email' => $email,
