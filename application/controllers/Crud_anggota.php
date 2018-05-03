@@ -56,6 +56,7 @@ class Crud_anggota extends CI_Controller{
 
 	public function approve_proses($id){
 	$grade = $this->input->post('grade');
+	$no_hp = $this->input->post('no_hp');
 	$unik="";
 		if ($grade=="Mawar"){
 			$unik = $this->dataanggota_model->id_anggota_mawar();
@@ -70,17 +71,16 @@ class Crud_anggota extends CI_Controller{
 	$data = array(
 		'id_anggota' => $id_anggota,
 		'grade' => $grade,
+		'password' => md5($no_hp),
 		'tanggal_gabung' => $tgl_gabung, 
 		'approval' => TRUE
 	);
-
 	$where = array(
 		'id' => $id
 	);
-
 	$query=$this->dataanggota_model->approveanggota($where,$data,'anggota');
 	redirect('Admin/approve');
-}
+	}
 
 	public function hapus_anggota($id){
 		$this->dataanggota_model->hapus_dataanggota($id);
@@ -109,20 +109,16 @@ class Crud_anggota extends CI_Controller{
 				'upload_path' => './assets/img/',
 				'allowed_types' => 'gif|jpg|png',
 				'max_size' => 1000,
-				'max_width' => 1000,
-				'max_height' => 1000
+				'max_width' => 2000,
+				'max_height' => 2000
 			];
 			$this->load->library('upload', $config);
 			$this->upload->overwrite = true;
-			if (!$this->upload->do_upload('close_up') OR !$this->upload->do_upload('full_body') ) //jika gagal upload
-			{
-					$error = array('error' => $this->upload->display_errors()); //tampilkan error
-					$this->load->view('Admin/errorupload', $error);
-			} else
-			//jika berhasil upload
-			{
-			$closeup = $this->upload->data();
+			$this->upload->do_upload('full_body');
 			$full_body = $this->upload->data();
+			$this->upload->do_upload('close_up');
+			$close_up = $this->upload->data();
+			
 
 		    $data = array(
 			'email' => $email,
@@ -138,12 +134,11 @@ class Crud_anggota extends CI_Controller{
 			'pengalaman' => $pengalaman,
 			'insentif' => $insentif,
 			'foto_fullbody' => $full_body['file_name'],
-			'foto_closeup' => $closeup['file_name'],
+			'foto_closeup' => $close_up['file_name'],
 			'approval' => FALSE
 			);
 		$this->dataanggota_model->regis_data($data,'anggota');
 		redirect('Daftarmember');
-	}
 }
 
 	public function approve_detail($id){

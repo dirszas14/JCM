@@ -17,7 +17,8 @@ class PortalMember extends CI_Controller {
 		// $data['totalartikel']= $this->dataartikel_model->totalartikel();
 		// $data['totaluser']= $this->datauser_model->totaluser();
 		// $data['totalapproval']= $this->dataanggota_model->totalapproval();
-		// $data['anggotaterbaru']= $this->dataanggota_model->anggotaterbaru();
+		$data['totalanggotaterbaru']= $this->dataanggota_model->totalanggotaterbaru();
+		$data['anggotaterbaru']= $this->dataanggota_model->anggotaterbaru();
 		$data['dataanggota']= $this->dataportalmember->dataanggota();
 		$this->load->view('portalmember/header');
 		$this->load->view('portalmember/headermain',$data);

@@ -23,16 +23,17 @@ $this->load->model(array('Login_Member'));
       $this->load->view('PortalMember/Login');
     } else {
       $email = $this->input->post('email');
-      $psw = $this->input->post('password');
+      $psw1 = $this->input->post('password');
       $email = $email;
-      $p = md5($psw);
-      $cek = $this->Login_Member->cek($email, $p);
+      $psw = md5($psw1);
+      $cek = $this->Login_Member->cek($email, $psw);
       if ($cek->num_rows() > 0) {
         //login berhasil, buat session
         foreach ($cek->result() as $qad) {
           $sess_data['email'] = $qad->email;
           $sess_data['nama'] = $qad->nama;
           $sess_data['id'] = $qad->id;
+          $sess_data['grade'] = $qad->grade;
           $this->session->set_userdata($sess_data);
         }
         $this->session->set_flashdata('success', 'Login Berhasil !');

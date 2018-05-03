@@ -17,6 +17,18 @@ $sql = "SELECT * FROM anggota WHERE approval IS TRUE";
 			$query = $this->db->query($sql);
 			return $query->result();
 }
+public function tampilanggotamawar()
+{
+$sql = "SELECT * FROM anggota WHERE approval IS TRUE AND grade='Mawar'";
+			$query = $this->db->query($sql);
+			return $query->result();
+}
+public function tampilanggotamelati()
+{
+$sql = "SELECT * FROM anggota WHERE approval IS TRUE AND grade='Melati'";
+			$query = $this->db->query($sql);
+			return $query->result();
+}
 public function anggotaterbaru()
 {
 $sql = "SELECT * FROM anggota WHERE approval IS TRUE ORDER BY tanggal_gabung DESC Limit 8";
@@ -152,5 +164,20 @@ $this->db->select('*');
 			$query = $this->db->get();
 			return $query->row_array();
 		}
+
+	public function member_content()
+		{
+			$sql = "SELECT * FROM anggota WHERE approval IS TRUE AND grade='Mawar' ORDER BY id DESC Limit 2";
+			$query = $this->db->query($sql);
+			return $query->result();
+		}
+
+	public function member_content_mel()
+		{
+			$sql = "SELECT * FROM anggota WHERE approval IS TRUE AND grade='Melati' ORDER BY id DESC Limit 2";
+			$query = $this->db->query($sql);
+			return $query->result();
+		}
+
 
 }

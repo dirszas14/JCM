@@ -80,6 +80,16 @@
               </tbody>
             </table>
           </div>
+           <?php if ($this->session->userdata('level') == "Super Admin"):?>
+          <div class="row">
+            <div class="col-sm-2 pull-right">
+               <a href="<?=site_url("Admin/export")?>" class="btn btn-danger"><span class="fa fa-print fa-2x"></span> Mawar</a>
+            </div>
+                <div class="col-sm-2 pull-right">
+                    <a href="<?=site_url("Admin/exportmelati")?>" class="btn btn-warning"><span class="fa fa-print fa-2x"></span> Melati</a>
+            </div>
+              </div>
+            <?php endif; ?>
         </div>
       </div>
 </section>
@@ -177,6 +187,17 @@
       <input type="text" name="insentif" class="form-control"  placeholder="Per 8 jam">
     </div>
   </div>
+   <div class="form-group">
+   <label class="col-sm-3 control-label font-weight-bold">Foto Full-Body</label>
+    <div class="col-sm-5">
+  <label class="custom-file">
+     <input type="file" class="custom-file-input" id="full_body" name="full_body" aria-describedby="fileHelp">
+        <label class="custom-file-label" for="full_body">
+           Pilih file...
+        </label>
+  </label>
+</div>
+  </div>
   <!--   <div class="form-group">
     <label class="col-sm-2 control-label">Foto</label>
     <div class="col-sm-10">
@@ -193,6 +214,7 @@
       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
     </div>
   </div>
+
 </form>
 </div>
 <div class="modal-footer">

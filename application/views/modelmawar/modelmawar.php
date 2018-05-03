@@ -9,7 +9,7 @@
 		foreach($mawar as $m){
 		?>  
 				<div class="col-12 col-md-<?=$lebarbs;?>">
-					<div class="card mb-3">
+					<div class="card mb-3" style="padding:10px;">
 					<img class="card-img-top model-closeup" data-alt-src="<?=base_url()?>assets/img/<?=$m['foto_closeup'];?>" src="<?=base_url()?>assets/img/<?=$m['foto_fullbody'];?>" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title text-center">

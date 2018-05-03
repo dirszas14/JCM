@@ -5,18 +5,18 @@ class datauser_model extends CI_Model{
 		$this->db->insert($table,$data);
 	}
 
-	 public function tampiluser()
+	 public function tampiluser($id)
     {
-       	$sql = "SELECT * FROM user ORDER BY id_user ASC";
+       	$sql = "SELECT * FROM user WHERE id NOT IN ($id) ORDER BY id ASC";
 		$query = $this->db->query($sql);
 		return $query->result();
     }
 
-    public function profileuser($id_user)
+    public function profileuser($id)
      {
        $this->db->select('*');
    		$this->db->from('user');
-      $this->db->where('id_user',$id_user);
+      $this->db->where('id',$id);
    		$query = $this->db->get();
  		return $query->row_array();
      }
@@ -27,7 +27,7 @@ class datauser_model extends CI_Model{
 	}
 
 	public function hapus_datauser($id_user){
-	 	$this->db->where('id_user',$id_user);
+	 	$this->db->where('id',$id_user);
 	  	return $this->db->delete('user');
  	}
 

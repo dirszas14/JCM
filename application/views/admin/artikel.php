@@ -46,6 +46,17 @@
       <textarea name="isiartikel" id="isiartikel" class="form-control" rows="10" cols="80""></textarea>
     </div>
   </div>
+   <div class="form-group">
+   <label class="col-sm-2 control-label font-weight-bold">Cover Artikel</label>
+    <div class="col-sm-5">
+  <label class="custom-file">
+     <input type="file" class="custom-file-input" id="cover_foto" name="cover_foto" aria-describedby="fileHelp">
+        <label class="custom-file-label" for="cover">
+           Pilih file...
+        </label>
+  </label>
+</div>
+  </div>
   <div class="form-group">
     <div class="col-sm-6 pull-right">
       <button type="submit" class="btn btn-primary" name="publish">Publish</button>

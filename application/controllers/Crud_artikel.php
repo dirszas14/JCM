@@ -14,19 +14,30 @@ class Crud_artikel extends CI_Controller{
 
 	function tambahartikel_proses(){
 
-    	$id_user = $this->session->userdata('id_user');
+    	$id_user = $this->session->userdata('id');
 		$judul = $this->input->post('judul');
 		$id_kategori = $this->input->post('kategori');
 		$isiartikel_pre = $this->input->post('isiartikel');
     	$isiartikel = $isiartikel_pre;
-		$date= date("Y-m-d");
-
+		
+		$config = [
+				'upload_path' => './assets/img/',
+				'allowed_types' => 'gif|jpg|png',
+				'max_size' => 5000,
+				'max_width' => 3000,
+				'max_height' => 3000
+			];
+			$this->load->library('upload', $config);
+			$this->upload->overwrite = true;
+			$this->upload->do_upload('cover');
+			$cover = $this->upload->data();
+			
 		$data = array(
      	 'id_user' => $id_user,
       	 'id_kategori' => $id_kategori,
-			'judul_artikel' => $judul,
-			'isi_artikel' => $isiartikel,
-			'tanggal' => $date
+		 'judul_artikel' => $judul,
+		 'isi_artikel' => $isiartikel,
+		 'cover_foto' => $cover['file_name']
 			);
 		$this->dataartikel_model->input_data($data,'artikel');
 		$this->session->set_flashdata('info', 'true');
@@ -56,6 +67,7 @@ class Crud_artikel extends CI_Controller{
 
  	public function editview($id_artikel)
 	{
+		$data['category'] = $this->dataartikel_model->selectcategory();
 		$data['artikel'] = $this->dataartikel_model->editartikel($id_artikel);
 		$data['namauser'] = $this->datauser_model->nama_user();
 		$this->load->view('admin/header');
@@ -63,6 +75,16 @@ class Crud_artikel extends CI_Controller{
 		$this->load->view('admin/asidebar',$data);
 		$this->load->view('admin/editartikel',$data);
 		$this->load->view('admin/footer');
+	}
+
+	public function viewartikel($id_artikel)
+	{
+		$data['category'] = $this->dataartikel_model->selectcategory();
+		$data['recentpost'] = $this->dataartikel_model->recentpost();
+		$data['viewartikel'] = $this->dataartikel_model->viewartikel($id_artikel);
+		$this->load->view('blog/header');
+		$this->load->view('blog/contohartikel',$data);
+		$this->load->view('blog/footer');
 	}
 
 }

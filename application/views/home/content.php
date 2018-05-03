@@ -77,13 +77,23 @@
           <div class="canvas-classa">
 
           <h1 style="color:white;">Mawar</h1><br>
+           <?php
+            $kolom=2;
+            $barismulai=0;
+            $lebarbs=12/$kolom;?>
           <div class="row">
+            <?php
+            foreach($member_content as $mc){
+            ?>  
             <div class="col-md-6">
-               <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
+               <img class="img-fluid model-photo mb-2" src="<?=base_url()?>assets/img/<?=$mc->foto_fullbody;?>" alt="Card image cap">
             </div>
-            <div class="col-md-6">
-              <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
-            </div>
+            <?php
+                $barismulai++;
+            if ($barismulai%$kolom == 0) 
+              echo '</div><div class="row">';
+            }
+            ?>
           </div><br>
           <a href="<?php echo site_url('modelmawar/') ?>" class="btn btn-info">Lihat Semua</a>
         </div>
@@ -92,13 +102,23 @@
           <div class="canvas-classb">
 
           <h1 style="color:black;">Melati</h1><br>
+           <?php
+            $kolom=2;
+            $barismulai=0;
+            $lebarbs=12/$kolom;?>
           <div class="row">
+            <?php
+            foreach($member_content_mel as $mcm){
+            ?>  
             <div class="col-md-6">
-                <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
+                <img class="img-fluid model-photo mb-2" src="<?=base_url()?>assets/img/<?=$mcm->foto_fullbody;?>" alt="Card image cap">
             </div>
-            <div class="col-md-6">
-              <img class="img-fluid model-photo mb-2" data-alt-src="<?php echo base_url('assets/img/avatar2.png')?>" src="<?php echo base_url('assets/img/avatar3.png')?>" alt="Card image cap">
-            </div>
+             <?php
+                $barismulai++;
+            if ($barismulai%$kolom == 0) 
+              echo '</div><div class="row">';
+            }
+            ?>
           </div>
           <br>
           <a href="<?php echo site_url('modelmelati') ?>" class="btn btn-info">Lihat Semua</a>
@@ -110,55 +130,33 @@
 <section class="canvas-blog" id="blog">
   <h1 class="display-2 text-center">BLOG</h1>
   <div class="container">
+    <?php
+      $kolom=3;
+      $barismulai=0;
+      $lebarbs=12/$kolom;?>
     <div class="row pb-2">
-      <div class="col-12 col-md-4 text-center">
-        <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
+      <?php
+    foreach($artikel_home as $ah){
+    ?>  
+      <div class="col-12 col-md-<?=$lebarbs;?> text-center">
+        <img class="img-fluid mx-auto" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
         <div class="row">
           <div class="col">
-            <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true"></i> admin</p>
-          </div>
-          <div class="col">
-            <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
+            <br><p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> <?=date_indo($ah->tanggal);?></p>
           </div>
         </div>
-        <h3>Judul Artikel </h3>
-           <p class="text-truncate" style="max-height: 300px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
+        <h3><?=$ah->judul_artikel;?></h3>
+           <p class="text-truncate" style="max-height: 300px;"><?=substr($ah->isi_artikel, 0, 200);?> ....</p>
            <div class="row">
-             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
-           </div>
-
-        </div>
-      <div class="col-12 col-md-4 text-center">
-        <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
-        <div class="row">
-          <div class="col">
-            <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true">&nbsp;</i> admin</p>
-          </div>
-          <div class="col">
-            <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
-          </div>
-        </div>
-        <h3>Judul Artikel </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
-          <div class="row">
-             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
+             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url("Crud_artikel/viewartikel/$ah->id_artikel")?>" class="btn btn-primary">Read More</a></div>
            </div>
         </div>
-      <div class="col-12 col-md-4 text-center">
-        <img class="img-fluid" src="<?php echo base_url('assets/img/avatar3.png'); ?>" alt="">
-        <div class="row">
-          <div class="col">
-            <p class="font-weight-light"><i class="fa fa-user" aria-hidden="true"></i> admin</p>
-          </div>
-          <div class="col">
-            <p class="font-weight-light"><i class="fa fa-clock-o" aria-hidden="true"></i> 17 December 2017</p>
-          </div>
-        </div>
-        <h3>Judul Artikel </h3>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, neque. Aperiam possimus, ab vel explicabo distinctio ipsam perferendis non similique vitae id laborum mollitia repudiandae dolorum dolorem, pariatur, commodi libero.</p>
-           <div class="row">
-             <div class="col-md-12 text-center pb-2"><a href="<?php echo site_url('blog') ?>" class="btn btn-primary ">Read More</a></div>
-           </div>
+        <?php
+        $barismulai++;
+        if ($barismulai%$kolom == 0) 
+          echo '</div><div class="row pb-2">';
+        }
+        ?>
       </div>
     </div>
   </div>

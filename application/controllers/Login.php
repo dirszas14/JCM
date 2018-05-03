@@ -30,6 +30,7 @@ $this->load->model(array('Login_Model'));
       if ($cek->num_rows() > 0) {
         //login berhasil, buat session
         foreach ($cek->result() as $qad) {
+          $sess_data['id'] = $qad->id;
           $sess_data['id_user'] = $qad->id_user;
           $sess_data['nama'] = $qad->nama;
           $sess_data['level'] = $qad->level;

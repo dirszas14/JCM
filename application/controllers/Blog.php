@@ -10,7 +10,7 @@ class Blog extends CI_Controller {
 		$this->load->view('blog/contohartikel',$data);
 		$this->load->view('blog/footer');
 	}
-
+	
 }
 
 /* End of file Blog.php */

@@ -4,13 +4,14 @@
     <!-- Sidebar user panel -->
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="<?=base_url()?>assets/img/<?=$namauser['foto'];?>" class="img-circle" alt="User Image">
+        <img src="<?=base_url()?>assets/img/<?=$namauser['foto'];?>" class="img-circle" alt="User Image" >
       </div>
       <div class="pull-left info">
          <?php
                  $id_user=$this->session->userdata('id_user');
+                 $level = $this->session->userdata('level');
                  ?>
-        <p><a href="<?php echo site_url("Crud_user/profile_user/$id_user")?>"> <?php echo $namauser['nama']; ?></a></p>
+        <p><?=$namauser['nama']; ?></p>
         <i class="fa fa-circle text-success"></i> Online
       </div>
     </div>
@@ -37,11 +38,13 @@
               <li class="<?php if($this->uri->segment(2)=="approve"){echo 'active approve-active';} ?>"><a href="<?php echo site_url('admin/approve') ?>"><i class="fa fa-check"></i> Approve</a></li>
             </ul>
           </li>
+    <?php if ($this->session->userdata('level') == "Super Admin"):?>
    <li class="<?php if($this->uri->segment(2)=="user"){echo 'active';} ?>">
       <a href="<?php echo site_url('admin/user')?>">
         <i class="fa fa-users"></i><span> Manajemen User</span>
       </a>
     </li>
+  <?php endif ?> 
    <!--  <li class="<?php if($this->uri->segment(2)=="approve"){echo 'active';} ?>">
       <a href="<?php echo site_url('admin/approve')?>">
         <i class="fa fa-check"></i><span> Approve</span>
@@ -55,11 +58,6 @@
      <li class="<?php if($this->uri->segment(2)=="kategoriartikel"){echo 'active';} ?>">
       <a href="<?php echo site_url('admin/kategoriartikel')?>">
         <i class="fa fa-tags"></i><span> Kategori Artikel</span>
-      </a>
-    </li>
-    <li class="<?php if($this->uri->segment(2)=="laporan"){echo 'active';} ?>">
-      <a href="<?php echo site_url('admin/laporan')?>">
-        <i class="fa fa-book"></i><span> Laporan</span>
       </a>
     </li>
     <li class="<?php if($this->uri->segment(2)=="ubahpassword"){echo 'active';} ?>">

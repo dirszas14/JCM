@@ -34,11 +34,10 @@
     <select name="kategori" class="form-control custom-select">
       <option value="">Pilih Kategori</option>
       <?php
-        foreach ($kategori as $k){ 
-      echo "<option value=" .$k->id_kategori . ">" . $k->kategori . "</option>";
-    }
-    echo "</select>";
-    ?>
+        foreach ($category as $k){ ?>
+          <option value="<?=$k->id_kategori?>" <?php if ($artikel['id_kategori']==$k->id_kategori) echo 'selected="selected"';?>><?=$k->kategori?></option>
+    <?php } ?>
+    </select>
     </div>
   </div>
   <div class="form-group">

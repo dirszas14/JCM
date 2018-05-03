@@ -81,7 +81,7 @@
     <b>JAKARTA CENTER MANAGEMENT</b>
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body">
+  <div class="login-box-body" style="border-radius: 9px;">
     <p class="login-box-msg">LOGIN PORTAL MEMBER</p>
 
     <form action="<?php echo site_url('LoginPortalMember/proses') ?>" method="post">
