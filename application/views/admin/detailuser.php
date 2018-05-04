@@ -32,7 +32,7 @@
       <form class="form-horizontal" action="<?php echo site_url('crud_user/reset_pw')?>" method='post' enctype="multipart/form-data">
    <div class="form-group">
     <div class="col-xs-12 text-center">
-      <img src="<?=base_url()?>assets/img/<?=$foto;?>" class="img-rounded" alt="Foto">
+      <img style="max-width:70%;max-height:70%;" class="fotodetail" src="<?=base_url()?>assets/img/<?=$foto;?>" class="img-rounded" alt="Foto">
     </div>
   </div>
   <div class="form-group">

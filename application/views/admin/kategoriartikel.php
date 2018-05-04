@@ -30,7 +30,7 @@
           <table class="table table-bordered table-striped" id="tabel_user" width="100%" cellspacing="0">
             <thead>
               <tr>
-                <th>NO</th>
+                <th style="width:5px;">NO</th>
                 <th>Kategori</th>
                 <th></th>
               </tr>

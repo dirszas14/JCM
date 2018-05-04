@@ -17,7 +17,7 @@ class dataartikel_model extends CI_Model{
       $sql = "SELECT artikel.id_artikel, artikel.judul_artikel, kategori.kategori, user.nama, artikel.tanggal 
       		  FROM artikel 
       		  INNER JOIN kategori on artikel.id_kategori = kategori.id_kategori
-      		  INNER JOIN user on artikel.id_user = user.id_user
+      		  INNER JOIN user on artikel.id_user = user.id
       		  ORDER BY artikel.judul_artikel";
 			  $query = $this->db->query($sql);
 			  return $query->result();
@@ -47,6 +47,42 @@ class dataartikel_model extends CI_Model{
 		return $query->num_rows();
     }
 
+    public function artikel_home()
+    {
+    	$sql = "SELECT artikel.*, user.nama as 'nama_user'
+    			FROM artikel 
+				INNER JOIN user ON artikel.id_user = user.id
+    			ORDER BY artikel.id_artikel DESC LIMIT 3";
+    	$query = $this->db->query($sql);
+    	return $query->result();
+    }
+
+     public function viewartikel($id_artikel)
+    {
+    	$sql = "SELECT artikel.*, user.nama as 'nama_user'
+    			FROM artikel 
+				INNER JOIN user ON artikel.id_user = user.id
+				WHERE artikel.id_artikel = $id_artikel";
+    	$query = $this->db->query($sql);
+    	return $query->row_array();
+    }
+
+    public function recentpost()
+    {
+    	$sql = "SELECT artikel.*, user.nama as 'nama_user'
+    			FROM artikel 
+				INNER JOIN user ON artikel.id_user = user.id
+    			ORDER BY artikel.id_artikel DESC LIMIT 5";
+    	$query = $this->db->query($sql);
+    	return $query->result();
+    }
+
+     public function selectcategory()
+    {
+    	$sql = "SELECT * FROM kategori ORDER BY kategori ASC";
+    	$query = $this->db->query($sql);
+    	return $query->result();
+    }
  //     public function totalmelati()
  //    {
  //       $this->db->select('*');

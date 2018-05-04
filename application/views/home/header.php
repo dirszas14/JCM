@@ -14,7 +14,7 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="199">
 	<nav style="transition: padding .3s;" class="navbar navbar-expand-md fixed-top navbar-dark bg-transparent">
-  <a class="navbar-brand" href="<?php echo site_url('') ?>">Jakarta Center Management</a>
+  <a class="navbar-brand" href="<?php echo site_url('') ?>"><img style="max-width:20%;max-height:20%;" src="<?=base_url()?>assets/img/logo.png?>" class="img-rounded" alt="Full Body"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
   </button>

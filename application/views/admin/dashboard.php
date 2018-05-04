@@ -10,8 +10,8 @@
 
 
 	      <section class="content">
-
-        <div class="row">
+          <div class="row">
+        <?php if($this->session->userdata('level')=="Super Admin"):?>
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-blue">
@@ -25,6 +25,7 @@
             <a href="<?php echo base_url('admin/user') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
+      <?php endif ; ?>
 
        <div class="col-lg-3 col-xs-6">
           <!-- small box -->
@@ -69,12 +70,12 @@
             <div class="icon">
               <i class="fa fa-newspaper-o"></i>
             </div>
-            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="<?php echo base_url('admin/artikel') ?>" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
-      </div>
+  
 
-      <div class="row">
+
       <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-green">
@@ -115,7 +116,7 @@
                       ?>
                      
                     <li>
-                      <img src="<?=base_url()?>assets/img/<?=$x->foto_closeup;?>" alt="User Image">
+                      <img class="recent" src="<?=base_url()?>assets/img/<?=$x->foto_closeup;?>" alt="User Image">
                       <a class="users-list-name" href="#"><?=$x->nama?></a>
                       <span class="users-list-date"><?=$x->grade?></span>
                       <span class="users-list-date"><?php $date=date("Y-m-d"); 

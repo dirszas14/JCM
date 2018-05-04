@@ -9,7 +9,7 @@
             <div class="alert alert-success alert-dismissible">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
               <h4><i class="icon fa fa-check"></i>Info</h4>
-              Berhasi
+              Berhasil
             </div>
           <?php endif ?>
         </section>
@@ -39,11 +39,11 @@
             <table class="table table-bordered table-striped" id="tabel_user" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>NO</th>
-                  <th>ID USER</th>
-                  <th>NAMA</th>
-                  <th>LEVEL</th>
-                  <th>NO.HP</th>
+                  <th style="align-center" width="2px">NO</th>
+                  <th >USERNAME</th>
+                  <th >NAMA</th>
+                  <th >LEVEL</th>
+                  <th >NO.HP</th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -54,13 +54,13 @@
                 foreach($user as $u){
                 ?>
                 <tr>
-                  <td><?php echo $no++ ?></td>
-                  <td><?=$u->id_user?> </td>
-                  <td><?=$u->nama?></td>
-                  <td><?=$u->level?></td>
-                  <td><?=$u->no_telp?></td>
-                  <td><a href="<?=site_url("Crud_user/detail_user/$u->id_user")?>" class="btn btn-info">Detail</a>
-                  <td><a href="<?=site_url("Crud_user/hapus_user/$u->id_user")?>" class="btn btn-danger">Hapus</a>
+                  <td ><?php echo $no++ ?></td>
+                  <td ><?=$u->id_user?> </td>
+                  <td ><?=$u->nama?></td>
+                  <td ><?=$u->level?></td>
+                  <td ><?=$u->no_telp?></td>
+                  <td ><a href="<?=site_url("Crud_user/detail_user/$u->id")?>" class="btn btn-info">Detail</a>
+                  <td ><a href="<?=site_url("Crud_user/hapus_user/$u->id")?>" class="btn btn-danger">Hapus</a>
                   </td>
               </tr>
               <?php } ?>
@@ -85,6 +85,12 @@
 </div>
 <div class="modal-body">
 <form class="form-horizontal" action="<?php echo site_url('crud_user/tambahuser_proses')?>" method='post' enctype="multipart/form-data">
+   <div class="form-group">
+    <label class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" name="email" class="form-control" required="true">
+    </div>
+  </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">Nama</label>
     <div class="col-sm-10">

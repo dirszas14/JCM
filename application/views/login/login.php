@@ -36,7 +36,7 @@
     <b>JAKARTA CENTER MANAGEMENT</b>
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body">
+  <div class="login-box-body" style="border-radius: 9px;">
     <p class="login-box-msg">LOGIN</p>
 
     <form action="<?php echo site_url('Login/proses') ?>" method="post">
@@ -49,7 +49,7 @@
             </div>
       <?php } ?>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" name="id_user" placeholder="ID User">
+        <input type="text" class="form-control" name="id_user" placeholder="Email">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">

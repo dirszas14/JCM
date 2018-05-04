@@ -9,8 +9,8 @@
 		foreach($mawar as $m){
 		?>  
 				<div class="col-12 col-md-<?=$lebarbs;?>">
-					<div class="card mb-3">
-					<img class="card-img-top model-closeup" data-alt-src="<?php echo base_url('assets/img/avatar3.png') ?>" src="<?php echo base_url('assets/img/avatar2.png') ?>" alt="Card image cap">
+					<div class="card mb-3" style="padding:10px;">
+					<img class="card-img-top model-closeup" data-alt-src="<?=base_url()?>assets/img/<?=$m['foto_closeup'];?>" src="<?=base_url()?>assets/img/<?=$m['foto_fullbody'];?>" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title text-center">
 							<?=$m['nama']?>

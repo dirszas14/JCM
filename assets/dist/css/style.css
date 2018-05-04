@@ -52,7 +52,7 @@ th {
 	font-family: 'Kaushan Script'
 }
 .logo span{
-	font-size: 12px;
+	font-size: 10px;
 	letter-spacing: 0px;
 	font-family: 'Kaushan Script';
 }
@@ -278,4 +278,14 @@ a.socialIcon:hover, .socialHoverClass {
 }
 a.icoFacebook, a.icoTwitter, a.icoLinkedin, a.icoInstagram {
  background-color: #999999;   
+}
+
+img.recent{
+	height:90px !important ; 
+}
+
+img.fotodetail{
+	max-width:500px !important;
+	max-height:800px !important;
+	margin:5px !important;
 }

@@ -14,14 +14,9 @@ class Crud_user extends CI_Controller{
 	}
 
 	function tambahuser_proses(){
-		$prefix = 123 ;
-		$id_temp = $this->input->post('nama');
-		$id_nospace = str_replace(' ','',$id_temp);
-		$id_lower = strtolower($id_nospace);
-		$id_user = $id_lower.''.$prefix;
+		$id_user =  $this->input->post('email');
 		$nama = $this->input->post('nama');
 		$no_telp = $this->input->post('no_telp');
-		$password = $this->input->post('no_telp');
 		$level = $this->input->post('level');
 
 		$data = array(
@@ -32,7 +27,7 @@ class Crud_user extends CI_Controller{
 			'level' => $level
 			);
 		$this->datauser_model->input_data($data,'user');
-		redirect('Admin/anggota');
+		redirect('Admin/user');
 		$this->session->set_flashdata('Berhasil', 'true');
 	}
 
@@ -58,8 +53,8 @@ public function hapus_user($id_user){
 		  redirect('Admin/user');
  	}
 
-  public function profile_user($id_user){
-  		  $query = $this->datauser_model->profileuser($id_user);
+  public function profile_user($id){
+  		  $query = $this->datauser_model->profileuser($id);
   		  $data['id_user'] = $query['id_user'];
   		  $data['nama'] = $query['nama'];
   		  $data['level'] = $query['level'];
@@ -73,8 +68,8 @@ public function hapus_user($id_user){
 		  $this->load->view('admin/footer');
    	}
 
-public function detail_user($id_user){
-  		  $query = $this->datauser_model->profileuser($id_user);
+public function detail_user($id){
+  		  $query = $this->datauser_model->profileuser($id);
   		  $data['id_user'] = $query['id_user'];
   		  $data['nama'] = $query['nama'];
   		  $data['level'] = $query['level'];
