@@ -157,9 +157,11 @@
           echo '</div><div class="row pb-2">';
         }
         ?>
+
       </div>
     </div>
   </div>
+   <div class="text-center"><a class="btn btn-primary" href="<?=site_url('crud_artikel')?>">Lihat Semua</a></div>
 </section>
 <section class="canvas-client text-center" id="client">
   <div class="container">

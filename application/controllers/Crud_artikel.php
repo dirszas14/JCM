@@ -10,6 +10,9 @@ class Crud_artikel extends CI_Controller{
 	}
 
 	function index(){
+		$this->load->view('blog/header');
+		$this->load->view('blog/blog');
+		$this->load->view('blog/footer');
 	}
 
 	function tambahartikel_proses(){
